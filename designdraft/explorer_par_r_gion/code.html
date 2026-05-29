@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heritage Excellence - Terroirs du Maroc</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;family=Amiri:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fcf9f8",
+                        "primary-fixed-dim": "#82d7ba",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-tertiary-fixed": "#231b00",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1b1b1b",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-secondary-container": "#650001",
+                        "inverse-primary": "#82d7ba",
+                        "inverse-on-surface": "#f3f0ef",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#016b54",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#fc6451",
+                        "tertiary-fixed-dim": "#ecc22c",
+                        "surface": "#fcf9f8",
+                        "surface-container-low": "#f6f3f2",
+                        "tertiary-fixed": "#ffe085",
+                        "secondary-fixed": "#ffdad5",
+                        "inverse-surface": "#313030",
+                        "tertiary-container": "#cfa701",
+                        "on-surface": "#1b1b1b",
+                        "on-secondary-fixed-variant": "#8e130c",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#eae7e7",
+                        "secondary": "#b02d21",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#3e4944",
+                        "on-primary-fixed-variant": "#00513f",
+                        "tertiary": "#735c00",
+                        "on-primary-container": "#94e8cb",
+                        "secondary-fixed-dim": "#ffb4a9",
+                        "outline-variant": "#bec9c3",
+                        "primary-container": "#006b54",
+                        "primary-fixed": "#9ef3d6",
+                        "on-secondary-fixed": "#410000",
+                        "surface-container": "#f0eded",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#002118",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dcd9d9",
+                        "outline": "#6f7a74",
+                        "on-tertiary-container": "#4e3e00",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fcf9f8",
+                        "primary": "#00513f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "display": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+    display: inline-block;
+    line-height: 1
+    }
+.grainy-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.02;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA3kTTBtimaqO7f7tZDPqbhcI7UzP0RofUqcof98COKHfbt2kUvWKUEE0YjgapYcjOqbx1tcCK09bU1VSlvnA97H3kTPkMuSAvu-Ry-voe_ePDiYCX5dIIQqzYfbhGQ57oKgjzq7mYZU983HJgOOUtABCkJACbmFN2pntzihRkoEZYEJSv6sC1B-l9eEDaSiFVA3lYY0WtItAoHG3ifg2J3loKiySHpe_9VD1Rc5LqbQIdNywjqBasJsVahDwyKIDfioFIh_QX2EZTw)
+    }
+.zellige-star {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)
+    }
+::-webkit-scrollbar {
+    width: 4px
+    }
+::-webkit-scrollbar-track {
+    background: #fcf9f8
+    }
+::-webkit-scrollbar-thumb {
+    background: #00513f;
+    border-radius: 10px
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="grainy-overlay"></div>
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-surface dark:bg-surface shadow-sm">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button aria-label="Open Menu" class="cursor-pointer active:opacity-70 transition-all text-primary dark:text-primary-fixed-dim">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<div class="font-headline text-2xl font-bold text-secondary dark:text-secondary-fixed-dim">
+                    Heritage Excellence
+                </div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-6 mr-6">
+<a class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Histoire</a>
+<a class="font-label text-[10px] uppercase tracking-widest text-primary font-bold" href="#">Explorer</a>
+<a class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Artisans</a>
+</div>
+<button aria-label="Shopping Bag" class="cursor-pointer active:opacity-70 transition-all text-primary dark:text-primary-fixed-dim">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12 pb-32">
+<!-- Editorial Header -->
+<section class="mb-12">
+<p class="text-primary font-label text-sm uppercase tracking-[0.2em] mb-4">Terroirs du Maroc</p>
+<h1 class="font-display text-4xl md:text-6xl text-on-background max-w-2xl leading-tight">
+                Explorer par région
+            </h1>
+<div class="h-1 w-24 bg-tertiary mt-6 opacity-30"></div>
+</section>
+<!-- Asymmetric Bento-inspired Region Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Region Card: Souss-Massa -->
+<article class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_24px_rgba(27,27,27,0.04)] hover:shadow-xl transition-all duration-500">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Souss-Massa Region" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic, high-resolution landscape of the Souss-Massa region in Morocco during the golden hour. The frame features ancient Argan trees with gnarled trunks scattered across a warm, clay-toned earthy terrain. In the background, the soft silhouettes of the Atlas mountains blend into a hazy, pastel sky. The lighting is warm and directional, creating long shadows and emphasizing the artisanal, heritage-focused aesthetic of the Moroccan countryside." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAZ8yp2UQYyzIPIGu6VrK288HD3AVQJ_rkh_gYyxEpgdHkNSKVmXgczcrdFrQsVeo230_8QLTvsmLOOv5hiMWGeTftWUBGnj-CZ2FgJ-fS7-TXN5RBpqWI61n4RLpMa2lnCU7sIorfrFY2empN4yM6ke-bHiPJm1KFn1QO93aMCJjBw84NdKPfIuKEDS26TsIf2EM5-Rz_lHwfhvxx7Em5P5Iahj9bNOk5EUA1IoZENmVeYi8BzB7CBFXKfianClH3CqCiyySJiUY7"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-2xl text-on-surface">Souss-Massa</h3>
+<span class="zellige-star bg-tertiary/20 text-tertiary-container w-8 h-8 flex items-center justify-center text-[10px] font-bold rotate-[-12deg]">IGP</span>
+</div>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed mb-6">Le pays de l’argan. Un écosystème unique entre mer et montagne où naissent les huiles les plus précieuses du royaume.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label text-xs uppercase tracking-widest font-bold group-hover:gap-4 transition-all" href="#">
+                        Découvrir le Terroir <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Region Card: Oriental (Featured Width) -->
+<article class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_24px_rgba(27,27,27,0.04)] hover:shadow-xl transition-all duration-500 lg:col-span-2">
+<div class="grid md:grid-cols-2 h-full">
+<div class="aspect-square md:aspect-auto overflow-hidden">
+<img alt="Oriental Region" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An expansive, wide-angle shot of the Oriental desert region in Morocco under a bright, high-noon sun. The landscape shows rolling sand dunes and rugged plateaus with deep orange and ochre hues. The sky is a vivid, cloudless cerulean blue. The image evokes a sense of vastness and ancient silence, perfectly aligned with a premium travel and heritage brand identity using natural, earthy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3iKGMCEC6TR7R9axzn5CvIunyCyOB7tBWPMg1muC5fvQ_CF_pDTcp6oLRJhz-GBV-fq8nykv8CD6fFzwDiCMOCFkeLpnFgobnb9x3PT6JRizzjx8r7R0mFJqxx06R5_jne8I4FhBQO36uYdedlPCuC2XrwZDeNZ7IbUqOyUBa0eibFSihIyvR0IijqklcstmA8_seh-D5TZEXdxjqKmDLcaF2InHFq2_yRGJMu9sl3HSs1Z8TGHgBSN9Fm8ynXi3h82rSpjjsGlFZ"/>
+</div>
+<div class="p-10 flex flex-col justify-center bg-surface-container-low/30">
+<h3 class="font-headline text-3xl text-on-surface mb-4">Oriental</h3>
+<p class="text-on-surface-variant font-body text-md leading-relaxed mb-8 italic">"L’âme du désert et les secrets des oasis millénaires."</p>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed mb-8">De Figuig à Berkane, l'Oriental offre une diversité saisissante, entre dattes savoureuses et agrumes gorgés de soleil méditerranéen.</p>
+<div>
+<button class="px-8 py-3 bg-primary text-on-primary rounded-lg font-label text-xs uppercase tracking-widest hover:bg-surface-tint transition-colors">Explorer l'Oasis</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Region Card: Fès-Meknès -->
+<article class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_24px_rgba(27,27,27,0.04)] hover:shadow-xl transition-all duration-500">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Fès-Meknès Region" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A lush, green perspective of an olive grove in the Fès-Meknès region of Morocco. Long, symmetrical rows of silver-green olive trees stretch towards the distant Middle Atlas mountains. The lighting is soft and diffused, characteristic of a fresh morning. The overall atmosphere is one of fertility, tradition, and agricultural excellence, rendered in a crisp, modern light-mode photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByWU_tIY1AiDQGjx7CNAIz5PtNlFQRrCBYfCPAya_NLkyBoDPzOMEVI53_W6iSo45naD8V9Xf-lrwkqu6J3XXi6tW6l_uBWPRiEFNgCVPTOrxilU2GLBMyiW2rAyoNScBbVrWTCqNEehSCjSDkgpzL_4f-ArygUa92z8-5kia-WBFkhfBjfE6k05rw317hFmUXDypqWzO28ZNzcEuPHYHFfAbSMnT3m0YTSuCYj5LGGif4WseZd8ogvC79_7sFdnf4YY2mQAzDK7H0"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline text-2xl text-on-surface mb-2">Fès-Meknès</h3>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed mb-6">Au cœur de l’olivier. Berceau impérial où l'art de vivre et l'agriculture se rencontrent depuis des siècles.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label text-xs uppercase tracking-widest font-bold group-hover:gap-4 transition-all" href="#">
+                        Voir les Artisans <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Region Card: Drâa-Tafilalet -->
+<article class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_24px_rgba(27,27,27,0.04)] hover:shadow-xl transition-all duration-500">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Drâa-Tafilalet Region" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A dramatic mountain pass in the Drâa-Tafilalet region, often called the gateway to the Sahara. The image showcases rugged, weathered rock formations in deep browns and reds against a sharp blue sky. The terrain is arid yet majestic, capturing the raw beauty of the Moroccan South. The visual style is premium and editorial, emphasizing texture and natural geological patterns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz6e_5V-MhiTEJTnkkLY_mJLYtLNLVBA_e3bBgL68pZ9g3LO3yw27vpwqpb_QCGwMnUa20kZYjTFeY5JGg41qDXuboB_yl-d7Sz4IWTrrNEM8_q74RffkO5ZQdlGzV_aEKrPThN7h5GlkpJcAEhRo8mu-QnuG6eg6nG7ShmX5h9a2Hf8HqAz_mjIqoLamEV4IQl_elXMMeT8oYlWmmUvPa_I2avyu6tEzfA-VDOoaEfwleN_wLdzYfIputLw5blBXB4STgStSKdM7f"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline text-2xl text-on-surface mb-2">Drâa-Tafilalet</h3>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed mb-6">La porte du Sahara. Une terre de contrastes, foyer du safran d'exception et des roses de Damas.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label text-xs uppercase tracking-widest font-bold group-hover:gap-4 transition-all" href="#">
+                        Explorer les Kasbahs <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Region Card: Marrakech-Safi (Small) -->
+<article class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_24px_rgba(27,27,27,0.04)] hover:shadow-xl transition-all duration-500">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Marrakech-Safi Region" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An artistic shot of a Moroccan artisan's workshop in Marrakech, showcasing vibrant terracotta pottery and hand-woven textiles. The scene is lit by dappled sunlight filtering through a traditional reed roof, creating a warm and inviting atmosphere. The colors are dominated by Moroccan red and zellige gold, highlighting the craftsmanship and cultural heritage of the region." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3SgBEBANCrDfj-aF5V3SWfd-gt8JV1b3tV6CdkyUrsemloMN5GtHaWYblnL1yVlhpWL5VNlG66wlhcPTc7UpioS12CXkoO_5rjBkQT3f34dHPo6MgAyyQDEE6UdLp7SPenmug-zHI4DQ6TieFGEZJgjTQXohhnARQZ-t7ZtXCp8yc8_k0-Zec4uibNKAPf88yTeYP79acKQ8ikN9sAg0qB_mEvzjIk7C067BPRN3xJR526zeXtpEjY_Z9WJkBkHye7LoVJA1vr_en"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline text-2xl text-on-surface mb-2">Marrakech-Safi</h3>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed mb-6">L'éclat de l'artisanat. Entre les poteries de Safi et l'effervescence créative de la ville rouge.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label text-xs uppercase tracking-widest font-bold group-hover:gap-4 transition-all" href="#">
+                        Découvrir les Métiers <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</main>
+<!-- WhatsApp FAB -->
+<a aria-label="Contact via WhatsApp" class="fixed bottom-24 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all z-40" href="#">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24">
+<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.514-2.961-2.63-.086-.117-.704-.937-.704-1.787 0-.85.441-1.266.598-1.441.157-.175.342-.218.456-.218.114 0 .228.001.328.005.104.004.243-.039.379.293.136.332.465 1.134.505 1.213.039.079.066.171.013.276-.052.105-.079.171-.157.263-.079.091-.166.204-.237.273-.082.079-.167.165-.072.329.095.164.422.697.905 1.128.622.555 1.144.728 1.308.81.164.082.261.069.358-.042.097-.111.417-.484.528-.65.111-.166.222-.139.374-.082.152.056.963.454 1.13.537.166.082.277.123.318.193.041.07.041.405-.103.81z"></path>
+</svg>
+</a>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0px_-4px_12px_rgba(27,27,27,0.04)] rounded-t-3xl border-t border-outline-variant/10">
+<div class="flex justify-around items-center px-4 py-3 pb-safe">
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label text-[9px] uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-label text-[9px] uppercase tracking-widest mt-1 font-bold">Explorer</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label text-[9px] uppercase tracking-widest mt-1">Favoris</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label text-[9px] uppercase tracking-widest mt-1">Compte</span>
+</a>
+</div>
+</nav>
+<footer class="hidden md:block py-16 bg-surface-container-low mt-12">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-2">
+<h2 class="font-headline text-2xl text-secondary mb-4">Heritage Excellence</h2>
+<p class="text-on-surface-variant max-w-sm">Célébrer la richesse insoupçonnée des terroirs marocains à travers une curation exigeante d'artisans et de produits d'exception.</p>
+</div>
+<div>
+<h4 class="font-label text-xs uppercase tracking-widest font-bold text-on-surface mb-6">Navigation</h4>
+<ul class="space-y-3 text-on-surface-variant text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Notre Histoire</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Carte des Terroirs</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Nos Artisans</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label text-xs uppercase tracking-widest font-bold text-on-surface mb-6">Légal</h4>
+<ul class="space-y-3 text-on-surface-variant text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Mentions Légales</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Politique de Confidentialité</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">CGV</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-outline-variant/20 flex justify-between items-center text-[10px] uppercase tracking-widest text-on-surface-variant font-label">
+<span>© 2024 Heritage Excellence. Tous droits réservés.</span>
+<div class="flex gap-4">
+<a href="#">Instagram</a>
+<a href="#">Facebook</a>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle parallax or hover effect enhancement
+        document.querySelectorAll('article').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const { left, top, width, height } = card.getBoundingClientRect();
+                const x = (e.clientX - left) / width;
+                const y = (e.clientY - top) / height;
+                
+                const moveX = (x - 0.5) * 10;
+                const moveY = (y - 0.5) * 10;
+                
+                const img = card.querySelector('img');
+                if (img) {
+                    img.style.transform = `scale(1.1) translate(${moveX}px, ${moveY}px)`;
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                const img = card.querySelector('img');
+                if (img) {
+                    img.style.transform = 'scale(1) translate(0, 0)';
+                }
+            });
+        });
+    </script>
+</body></html>

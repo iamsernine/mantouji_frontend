@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#002118",
+              "error-container": "#ffdad6",
+              "tertiary-container": "#cfa701",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f3f0ef",
+              "secondary-container": "#fc6451",
+              "on-surface": "#1b1b1b",
+              "tertiary-fixed-dim": "#ecc22c",
+              "secondary-fixed-dim": "#ffb4a9",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              "outline-variant": "#bec9c3",
+              "on-secondary": "#ffffff",
+              "secondary": "#b02d21",
+              "on-tertiary-fixed": "#231b00",
+              "primary": "#00513f",
+              "on-background": "#1b1b1b",
+              "on-secondary-fixed": "#410000",
+              "on-error-container": "#93000a",
+              "surface-container": "#f0eded",
+              "outline": "#6f7a74",
+              "tertiary": "#735c00",
+              "primary-fixed-dim": "#82d7ba",
+              "surface-container-high": "#eae7e7",
+              "inverse-surface": "#313030",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#94e8cb",
+              "surface-container-highest": "#e5e2e1",
+              "surface": "#fcf9f8",
+              "on-surface-variant": "#3e4944",
+              "on-tertiary-container": "#4e3e00",
+              "primary-container": "#006b54",
+              "surface-container-low": "#f6f3f2",
+              "surface-tint": "#016b54",
+              "on-primary-fixed-variant": "#00513f",
+              "tertiary-fixed": "#ffe085",
+              "background": "#fcf9f8",
+              "on-tertiary-fixed-variant": "#574500",
+              "on-secondary-container": "#650001",
+              "surface-dim": "#dcd9d9",
+              "secondary-fixed": "#ffdad5",
+              "error": "#ba1a1a",
+              "on-secondary-fixed-variant": "#8e130c",
+              "surface-bright": "#fcf9f8",
+              "primary-fixed": "#9ef3d6",
+              "inverse-primary": "#82d7ba",
+              "surface-variant": "#e5e2e1"
+            },
+            fontFamily: {
+              "serif": ["Noto Serif", "Amiri", "serif"],
+              "sans": ["Inter", "sans-serif"],
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.paper-grain {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAGq_h8orcuFGOqJwHM6aj5ykfhgLDfeGIgYwKQly3YEywKUFHqEli9K-PThQylTPfy-79hgPf2A3cv150qfsAEPZQksZPYst1Taw5rTGlgSP8-CCX528NiTtoc-NqMAKVAt4nzAY_3AnyCtLEekMJSDpMLQLZTi4ue3WR8t_hQxH7gGiTex5lqq7ld_Nq6DrZwI3vAzTvPT2d30_WXN5PX3yPN1pXWQCsW2itTz6_Lwpnkxani917BDn3Rj_5MZUzMJt8W3rXmTsO4)
+    }
+.zellige-stamp {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)
+    }
+.hide-scrollbar::-webkit-scrollbar {
+    display: none
+    }
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-sans selection:bg-primary/20">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f8]/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-8xl mx-auto">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-serif font-bold text-[#00513f] dark:text-[#006B54] tracking-tight" href="/">
+                    MANTOUJI
+                </a>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-[#00513f] dark:text-[#006B54] font-bold border-b-2 border-[#00513f] pb-1 font-serif text-lg tracking-tight" href="#">Explorer</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#00513f] font-serif text-lg tracking-tight transition-colors duration-300" href="#">Cooperatives</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#00513f] font-serif text-lg tracking-tight transition-colors duration-300" href="#">Héritage</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#00513f] font-serif text-lg tracking-tight transition-colors duration-300" href="#">Authenticité</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1 bg-surface-container-low rounded-full">
+<button class="text-[10px] font-bold text-primary">FR</button>
+<span class="w-[1px] h-3 bg-outline-variant"></span>
+<button class="text-[12px] font-serif text-on-surface-variant">عربي</button>
+</div>
+<button class="p-2 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors duration-300 rounded-full flex items-center">
+<span class="material-symbols-outlined text-[#00513f]" data-icon="shopping_basket">shopping_basket</span>
+</button>
+<button class="p-2 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors duration-300 rounded-full">
+<span class="material-symbols-outlined text-[#00513f]" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-20 px-6 overflow-hidden bg-surface paper-grain">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 space-y-8 z-10 text-center md:text-left">
+<h1 class="font-serif text-5xl md:text-7xl text-primary leading-[1.1] tracking-tight">
+                    Le terroir marocain, <br/>
+<span class="italic text-secondary">livré chez vous</span>
+</h1>
+<p class="font-sans text-lg text-on-surface-variant max-w-xl mx-auto md:mx-0 leading-relaxed">
+                    Découvrez une sélection exclusive de produits d'exception issus des coopératives les plus prestigieuses du Royaume. L'authenticité au cœur de votre table.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<button class="px-10 py-4 bg-primary text-on-primary font-medium rounded-lg hover:shadow-xl transition-all duration-300 active:scale-95">
+                        Découvrir la collection
+                    </button>
+<button class="px-10 py-4 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary/5 transition-all duration-300 active:scale-95">
+                        Nos coopératives
+                    </button>
+</div>
+<!-- Trust Pills -->
+<div class="flex flex-wrap gap-3 justify-center md:justify-start pt-6">
+<div class="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">47 Coopératives</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="verified" data-weight="fill">verified</span>
+<span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Certifié ONSSA</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="local_shipping" data-weight="fill">local_shipping</span>
+<span class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Livraison Premium</span>
+</div>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-tertiary/10 rounded-full blur-3xl"></div>
+<div class="relative w-full aspect-[4/5] bg-surface-container-low rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
+<img alt="Heritage" class="w-full h-full object-cover" data-alt="Traditional Moroccan pottery and spices on a table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8Cw22uye_5anLJSYTTbYGN8RhKHXOCAQwIy740oacXdV6cTkCc2braFQQW3VQJ90IsMwSrdWXDxWv-WJP76-LtuKVeygauHkLy1BXrujgciOHztPK1gNyRvB4cMNn5keRGt7rDK9_7ixhUbU5ClWphqYEjpy8hws4YVUgWrb6C_p_6SIUs-9V_MtNeV5s5oI4JprPE6mA-7cEmwQmjzBqLm7HOUh8V0_z6WXCIUMd3ZMl6qL1AXYOqFybiI8xwg44xcU0egRKETIN"/>
+</div>
+<div class="absolute -bottom-6 -left-6 w-48 h-48 bg-white p-2 rounded-xl shadow-xl -rotate-3">
+<img alt="Product focus" class="w-full h-full object-cover rounded-lg" data-alt="Premium organic honey in a glass jar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKxcyScUfhDTARhxoPMlcepFx5QbUnkhvN9POJS0zhFbzv5K59XhgTTdpUU-hsB2QL_2G2KPok2VU-QohqCzDA_ksXjF_4FVUX_LLhmlYJu1KCDqebQgJmwqXt9x6p0y2ehSKVVXUVGX7jToUjTzqCR5LPAnnU-L3xddN2K2IaONb_HlxGXKB31vP_iDQddfASE9n1W5FWxdUqM1rLA2ADimQhMnOmjbAX3eirJxXWt7JUgrL3ZMPz5pmlv9P4VjdaYS5k7KKVbhTM"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Filières (Categories) Scroll -->
+<section class="py-16 bg-surface-container-low">
+<div class="px-6 max-w-7xl mx-auto">
+<h2 class="font-serif text-3xl text-primary mb-10 text-center">Nos Filières d'Excellence</h2>
+<div class="flex gap-6 overflow-x-auto hide-scrollbar pb-8 px-2">
+<!-- Category Item -->
+<div class="flex-none w-48 group cursor-pointer">
+<div class="w-48 h-48 rounded-full overflow-hidden bg-white shadow-md border-4 border-white group-hover:border-tertiary transition-all duration-300">
+<img alt="Dattes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close up of high quality Medjool dates" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEXeIhvmu_Nl_KJtmXly4jffnWC1IdMblOc3gHy3J0VME_SErm4ZcuSPl3CaJqzAziJVN63SFD_YZnlrkHbUoASZF1ZCQ09hM1gOGCx2blNAgCwoiXNtli6Ynn1RINzvoGF4NJfsPus4RDez1zri2CNZqSB-8KUhgeAv6cfIWRx90D8WlPIfDqvBpCaroB0-tGChb_loIK6m8YNpNrcpdA7dC6t3uYsLtwRoQTrzlE9-R4Jl1sfIsrSiv932C5F9TBqnydHpbpemVg"/>
+</div>
+<p class="text-center mt-4 font-serif text-lg font-bold text-primary">Dattes</p>
+</div>
+<div class="flex-none w-48 group cursor-pointer">
+<div class="w-48 h-48 rounded-full overflow-hidden bg-white shadow-md border-4 border-white group-hover:border-tertiary transition-all duration-300">
+<img alt="Miel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Golden honey dripping from a wooden dipper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB04RLPWRL2IagScsf5K5Otumyp2DL6misaco2rif69P-6Y56RoXFkgCzM9Cu7HYJxnttJS1RlP7jmjXi8xwAHUvGv3el3adqQ10dXSuESxzaGZiXyKkXDSR15koV_3a07bVbLsOoejhevUV01JUgizSB-YfFoV5kwylzC7ZamRU4-aO8IPxcvcPphBI5XOhpqs88to5rPtNswn9bnQjZSpcJB4CnKIR-CjAqgT-ymhYmjoqpJOYqaVsGv9rHnH7V5kKki8ZQq9fIga"/>
+</div>
+<p class="text-center mt-4 font-serif text-lg font-bold text-primary">Miel</p>
+</div>
+<div class="flex-none w-48 group cursor-pointer">
+<div class="w-48 h-48 rounded-full overflow-hidden bg-white shadow-md border-4 border-white group-hover:border-tertiary transition-all duration-300">
+<img alt="Cumin" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A heap of ground cumin spice" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDblZiCq4kmjRm03jxMr6PCIMzZqf5VqQiCnI4RumsETphFE64UuKG_3kTdgIwh2PK5AMAr_UtCAqyZ1jxC-rxBmms5txcUGUy80kjGjk5ca29gR4U0G56DTgx4-ugBbRUUjqGvvGD_DGDf6Z1K1Buj3EHq1xztR-o7nf4EbB27TrXjNxYf8OhtwDgCpqg8HoxpppXrt5zBFrvoQR20RD4PsnH5LWkC7LwdgW1gwAuJH4HXNjiQkDV83TrViJu0_c_JRyaBw1CvJOyh"/>
+</div>
+<p class="text-center mt-4 font-serif text-lg font-bold text-primary">Épices &amp; Cumin</p>
+</div>
+<div class="flex-none w-48 group cursor-pointer">
+<div class="w-48 h-48 rounded-full overflow-hidden bg-white shadow-md border-4 border-white group-hover:border-tertiary transition-all duration-300">
+<img alt="Huile d'Olive" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Olive oil in a glass bottle next to fresh olives" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLTAkd-9kNcc78rDxTqIiTJF8uitTFS3TzgjfQnbBhF5b0EvGqLJBafbTPXGXI_oEuYiT0Kzrw9hph-zkLQI2moetHahO3iBNNc_BwFlR5G138yrh55qvlxNDEWP8vgnqZ6Z-1qQXuWhp-H90uSFurCpqUhJ2Nm9oxe0ETiXwKOQMwIylIMRrFYg8f2cX9C176QY_CkvpGiiJtQptj7AaKMprXkd7no7vBlE4Q-j68qLPkDEzO7WGv8kzM0ucGVyRMQ2LTQIoCcLxT"/>
+</div>
+<p class="text-center mt-4 font-serif text-lg font-bold text-primary">Huile d'Olive</p>
+</div>
+<div class="flex-none w-48 group cursor-pointer">
+<div class="w-48 h-48 rounded-full overflow-hidden bg-white shadow-md border-4 border-white group-hover:border-tertiary transition-all duration-300">
+<img alt="Couscous" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Traditional handmade Moroccan couscous semolina" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqKxj9JqHzSQXOb3sUGpN8C-drqcKtnKivL8z8CCJTIaeu2X8n8rblMtWVvuXK-I8d7ZOUoIW1cvAMY6iw5W1Y8jcaAjdOPYQRvYcwlAzTOKPC1UjIgrFuzgY0SEhEWQdmq9lOZLytV2ZruP0Ixvm5V38DxpjCpQPXoINyi2ENIDunl9jQcEGO_U5FqOVPkORxcKAHZYhqARO1eSeOlGeaLv649wII7ZzLILyvqJ7qaziC9uozMogBPbGx9niSeIJvmdvm_irND0E3"/>
+</div>
+<p class="text-center mt-4 font-serif text-lg font-bold text-primary">Couscous</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products Grid -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="text-tertiary font-semibold tracking-widest text-xs uppercase">Sélection du mois</span>
+<h2 class="font-serif text-4xl text-primary mt-2">Produits Vedettes</h2>
+</div>
+<a class="text-primary font-medium border-b border-primary/30 hover:border-primary transition-all pb-1" href="#">Tout voir</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Product Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-2xl transition-all duration-500 relative">
+<div class="relative h-72 rounded-lg overflow-hidden mb-6">
+<img alt="Honey" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Jar of premium Moroccan honey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR9PJBFlYDRoaI_oPLtAHcO7M7H3J0jKosngrNGOB00KwvTL0l6aD-mVqRVBZW-pD1tQ2P7sDe0vtr1nZVXI2n94cpGp1mUaMdKCU57DBil_5uuxrcofbbJ-QALEQHT7njuMYSaZ4G1a0Vjwk1rVoRi6Vb1-8m3Jt8yCJN9jkuDn_QJLESPXz8rAm-3iNbfS0Kpaz7ZQW1AMcZEEKBrIGazYu4Nxd9qkdpHBytCSq146ZUzzql5VtE4wQGbQCWsOBlPn2Expw1ePXL"/>
+<div class="absolute top-3 left-3 flex flex-col gap-2">
+<span class="bg-primary text-white text-[10px] px-2 py-1 rounded-sm uppercase tracking-tighter rotate-[-2deg]">ONSSA Certifié</span>
+<span class="bg-tertiary text-white text-[10px] px-2 py-1 rounded-sm uppercase tracking-tighter rotate-[1deg]">Bio Maroc</span>
+</div>
+</div>
+<div class="space-y-2">
+<h3 class="font-serif text-xl text-primary">Miel d'Argan Pur</h3>
+<p class="text-sm text-on-surface-variant font-sans">Coopérative Tighanimine</p>
+<div class="flex justify-between items-center pt-4">
+<span class="text-2xl font-serif text-primary">240 DH</span>
+<button class="bg-primary hover:bg-primary-container text-on-primary w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_basket">shopping_basket</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-2xl transition-all duration-500 relative translate-y-4">
+<div class="relative h-72 rounded-lg overflow-hidden mb-6">
+<img alt="Olive Oil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Bottle of organic extra virgin olive oil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhVtqrRCbHXGtsgr3dsnzblgpZUmbIdbtCErytoXoxTUX1T9HFYFPsBHja1OW6KJcyAUSbEQOUv4H0yMDpyuktSPQ4osE3oksCibDcWxL2Noy7FNeLmOA7226c2o2E5XQQFuiWuZqoKzwuDB49olabhfk6pNKexDYb3UPF8IyZ8kajbwsKV30AXWtaPXMpL1D4-sR0c0RF-6MZQ_JASpvSNyzXRIkzwh8or9EC3ZuVG61PPX61UAbU-fjlwBYgVq5WweMKjEnnqGT1"/>
+<div class="absolute top-3 left-3">
+<span class="bg-secondary text-white text-[10px] px-2 py-1 rounded-sm uppercase tracking-tighter rotate-[3deg]">IGP Protégée</span>
+</div>
+</div>
+<div class="space-y-2">
+<h3 class="font-serif text-xl text-primary">Huile d'Olive Extra Vierge</h3>
+<p class="text-sm text-on-surface-variant font-sans">Domaine Azrou</p>
+<div class="flex justify-between items-center pt-4">
+<span class="text-2xl font-serif text-primary">125 DH</span>
+<button class="bg-primary hover:bg-primary-container text-on-primary w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_basket">shopping_basket</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl p-4 shadow-sm hover:shadow-2xl transition-all duration-500 relative">
+<div class="relative h-72 rounded-lg overflow-hidden mb-6">
+<img alt="Saffron" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Rare saffron threads in a small jar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFe_Bn5G_lgNV_-H519GmFbne5fFRVPwT1r89iVy0cA8lUO6smYKrzqDEy52n7fKbeSX5WmsML961E19llfgmQ6mKCt0RcuwEX4aTUdnvx7pYpE7krQy5wns4AQmS73Nc0Uj3NZd3wajV15xmi9z2TQ0Db8f7N5tg3wO65yITWh7Fcu6Owwt1-WOZ41stiYuCF8ms0SPXbqN3I4TPjwKvBAJbp8-MtXflk_ZV4OFZAlQOq5jOLyGnyWeXMRaw14IELwWoDYorHKkvS"/>
+<div class="absolute top-3 left-3">
+<span class="bg-tertiary text-white text-[10px] px-2 py-1 rounded-sm uppercase tracking-tighter rotate-[-1deg]">Rare d'Exception</span>
+</div>
+</div>
+<div class="space-y-2">
+<h3 class="font-serif text-xl text-primary">Safran de Taliouine</h3>
+<p class="text-sm text-on-surface-variant font-sans">Coopérative Souktana</p>
+<div class="flex justify-between items-center pt-4">
+<span class="text-2xl font-serif text-primary">85 DH</span>
+<button class="bg-primary hover:bg-primary-container text-on-primary w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_basket">shopping_basket</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Cooperative Story Strip -->
+<section class="mt-24 bg-primary text-on-primary py-20 overflow-hidden relative">
+<div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+<svg class="rotate-12" height="400" viewbox="0 0 100 100" width="400">
+<path d="M50 0 L61 35 L98 35 L68 57 L79 91 L50 70 L21 91 L32 57 L2 35 L39 35 Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1 space-y-6">
+<h2 class="font-serif text-4xl md:text-5xl leading-tight">L'impact social au cœur de chaque bouchée.</h2>
+<p class="text-primary-fixed opacity-90 text-lg leading-relaxed">
+                    MANTOUJI travaille en direct avec 47 coopératives rurales. En achetant nos produits, vous assurez un revenu équitable aux artisans et préservez un savoir-faire millénaire qui définit l'identité du terroir marocain.
+                </p>
+<div class="pt-4">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-bold hover:bg-secondary-fixed-variant transition-colors flex items-center gap-3">
+                        Découvrir nos producteurs
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex-1 grid grid-cols-2 gap-4">
+<div class="aspect-square bg-white/10 rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+<img alt="Artesan" class="w-full h-full object-cover" data-alt="Traditional Moroccan woman artisan working" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKRvSH3_4jLVTa_9TtkcmQ5IvFDFnXenfQhfSAA2bo7xJMlF1VxJMYsQ0BOGfKLlQvge-OsE4CsmBvf-RErQ41oE7wrrXMFNRoadhMxXAPtkpwi8LWZpSv_okWrJy9Lj-Sr99Zviqruv7TszEqlqFUUEr57BTJVH2AFPueJGvd2nqrddXqBrDklP3Z_OIf20BQTEbiYDjqQzJTY56QqxwlMRqZormWnBG7pXOnUC-3x4rlSdQ96RdzcJRuVx7w1Rm2Zu4A0QwRO1VW"/>
+</div>
+<div class="aspect-square bg-white/10 rounded-xl overflow-hidden mt-8 grayscale hover:grayscale-0 transition-all duration-700">
+<img alt="Coop" class="w-full h-full object-cover" data-alt="Aerial view of traditional farming fields" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOiQwZgeNo6-prSPRCapPRaM78zHjUk_VtKeVJ4Hw4g6eKHBwedOfeWRrkBZOzGRD2GHqn5lf4vyIZwvHkYPh6SkbQNFLFntUWifSlUUie5gJ0J8JHq0AAAx9iJVQ6TM1IHydeQwh_1FRTBJDhPnXv7exrPqmgQDxN9WnuJy0L3VlKx-LDIWhxiBQQdiIrB8h06Wbc09osiP-7mOsNfmNEEnp1cNkR8ijXnjpuN_WPcu_vqvVRIirzB2nL51CLWH5jeMlUnfT3I-xx"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#00513f] dark:bg-stone-950 w-full pt-16 pb-8 flex flex-col items-center gap-8 px-10">
+<div class="flex flex-col items-center gap-6">
+<span class="font-serif text-3xl italic text-[#fcf9f8]">MANTOUJI</span>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-sans text-xs uppercase tracking-widest text-[#fcf9f8]/60 hover:text-white transition-colors duration-300" href="#">Explorer</a>
+<a class="font-sans text-xs uppercase tracking-widest text-[#fcf9f8]/60 hover:text-white transition-colors duration-300" href="#">Mentions Légales</a>
+<a class="font-sans text-xs uppercase tracking-widest text-[#fcf9f8]/60 hover:text-white transition-colors duration-300" href="#">Politique de Confidentialité</a>
+<a class="font-sans text-xs uppercase tracking-widest text-[#fcf9f8]/60 hover:text-white transition-colors duration-300" href="#">Contact</a>
+<a class="font-sans text-xs uppercase tracking-widest text-[#fcf9f8]/60 hover:text-white transition-colors duration-300" href="#">Devenir Partenaire</a>
+</div>
+</div>
+<div class="w-full h-[1px] bg-white/10 max-w-4xl"></div>
+<div class="flex flex-col md:flex-row justify-between items-center w-full max-w-7xl text-[#fcf9f8]/50 text-[10px] uppercase tracking-[0.2em] gap-4">
+<p>© 2024 MANTOUJI. Le Patrimoine du Terroir Marocain.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-sm cursor-pointer hover:text-white" data-icon="language">language</span>
+<span class="material-symbols-outlined text-sm cursor-pointer hover:text-white" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-sm cursor-pointer hover:text-white" data-icon="favorite">favorite</span>
+</div>
+</div>
+</footer>
+</body></html>

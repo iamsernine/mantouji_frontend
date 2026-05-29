@@ -1,0 +1,27 @@
+---
+description: Implement pages from designdraft Stitch exports with unified Mantouji design system
+alwaysApply: true
+---
+
+# Stitch / designdraft workflow
+
+## Source of truth for new screens
+
+Read **`designdraft/`** (folder per page, usually `code.html`). Map routes via **`designdraft/README.md`**.
+
+Do NOT rely on Stitch MCP/API unless explicitly available.
+
+## Design rules (required)
+
+Follow **`.cursor/rules/design-unification.mdc`**:
+- Stitch = inspiration for layout and content only
+- Reuse Mantouji tokens: burgundy, sage, cream, `rounded-2xl`, `shadow-sm`, Noto Serif + Inter
+- Reuse shared components; extend variants — never duplicate Button/Card styles
+- No cart, checkout, or payment
+
+## Implementation checklist
+
+1. Read `designdraft/<folder>/code.html`
+2. Reuse: `PageHeader`, `Button`, `ProductCatalogCard`, `CooperativeCard`, `Badge`, `MenuRow`, `EmptyState`
+3. Create page under `src/app/<route>/page.tsx`
+4. Update `MODEL_CONTEXT.md` and `PAGES.md` if adding routes

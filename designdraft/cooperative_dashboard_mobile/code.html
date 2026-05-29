@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600;700&amp;family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#002118",
+              "error-container": "#ffdad6",
+              "tertiary-container": "#cfa701",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f3f0ef",
+              "secondary-container": "#fc6451",
+              "on-surface": "#1b1b1b",
+              "tertiary-fixed-dim": "#ecc22c",
+              "secondary-fixed-dim": "#ffb4a9",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              "outline-variant": "#bec9c3",
+              "on-secondary": "#ffffff",
+              "secondary": "#b02d21",
+              "on-tertiary-fixed": "#231b00",
+              "primary": "#00513f",
+              "on-background": "#1b1b1b",
+              "on-secondary-fixed": "#410000",
+              "on-error-container": "#93000a",
+              "surface-container": "#f0eded",
+              "outline": "#6f7a74",
+              "tertiary": "#735c00",
+              "primary-fixed-dim": "#82d7ba",
+              "surface-container-high": "#eae7e7",
+              "inverse-surface": "#313030",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#94e8cb",
+              "surface-container-highest": "#e5e2e1",
+              "surface": "#fcf9f8",
+              "on-surface-variant": "#3e4944",
+              "on-tertiary-container": "#4e3e00",
+              "primary-container": "#006b54",
+              "surface-container-low": "#f6f3f2",
+              "surface-tint": "#016b54",
+              "on-primary-fixed-variant": "#00513f",
+              "tertiary-fixed": "#ffe085",
+              "background": "#fcf9f8",
+              "on-tertiary-fixed-variant": "#574500",
+              "on-secondary-container": "#650001",
+              "surface-dim": "#dcd9d9",
+              "secondary-fixed": "#ffdad5",
+              "error": "#ba1a1a",
+              "on-secondary-fixed-variant": "#8e130c",
+              "surface-bright": "#fcf9f8",
+              "primary-fixed": "#9ef3d6",
+              "inverse-primary": "#82d7ba",
+              "surface-variant": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "Amiri"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.zellige-pattern {
+    background-color: #00513f;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAlGyN59MvkHDETXrOnvZv-D1r7RvTcYE_ojQTJvcAqP9VF5STU7a5aLTacFOz7lkj0TleuCNWTXRSxQR_sZQL4lHqNIlDZ6M2_yw-zKB9p-ML1yCIPYurqpfrC6gH2topDxbbCDvvygdDXW00wUNC_lL-TbUU0eLOSYquDWMH9t2BsnFlYDfkTg_hU_EbNwlyr21asc1A0Avc9Owe8l4ZrbBFLdckKAq8V9pA5wEOY_6g4znbAAnkY0TwZuOGRQoNaqASfzbp8qyln)
+    }
+.stamp-status {
+    transform: rotate(-2deg);
+    display: inline-block
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-surface antialiased max-w-[390px] mx-auto min-h-screen relative shadow-2xl">
+<!-- TopNavBar -->
+<header class="bg-primary text-white sticky top-0 z-50 px-4 py-3 flex justify-between items-center shadow-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="menu">menu</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-lg tracking-tight">MANTOUJI</span>
+<span class="text-[10px] uppercase tracking-widest opacity-80">Coop. Al Kossour</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-secondary rounded-full"></span>
+</div>
+<img alt="Avatar Al Kossour" class="w-9 h-9 rounded-full border-2 border-white/20 object-cover" data-alt="Close up portrait of a Moroccan artisan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9tOS5BZT9LCPCjgxCQQPYzrznDNoWZMz55l6_ouzDjbRDOL_XqKZD5UUHAaz8LxKGXomvAUujtlttc-h20wCkSQS_g96XD5E9cyY406OmmNDz-G2sI0xd0jaBE3cVKiF9je5yLHwfy5HIVJTOGhppCfftFpxInmyVhvMCM-w3PKhRjZrgtPdWvrH8jcXjNYGDZ4wd6lHIFXkv3RzCjNpJPYuWp9mEhwKFA6ZZlz_bzcf-IzTcNe16h2a_gAw6DI9Kiq4LVN8IFlST"/>
+</div>
+</header>
+<main class="pb-24 pt-6 px-4 space-y-6">
+<!-- Welcome Card -->
+<section class="zellige-pattern rounded-xl p-6 text-white relative overflow-hidden shadow-lg">
+<div class="relative z-10">
+<h1 class="font-headline text-2xl mb-1">Bonjour, Al Kossour ✦</h1>
+<p class="text-white/70 text-sm font-light">Lundi, 24 Juin 2024</p>
+<div class="mt-6 flex justify-between items-end">
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] opacity-60">Statut Coopérative</p>
+<p class="font-headline text-lg italic">Producteur Certifié</p>
+</div>
+<span class="material-symbols-outlined text-tertiary-fixed text-4xl" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-8 -right-8 opacity-10">
+<span class="material-symbols-outlined text-[160px]" data-icon="eco">eco</span>
+</div>
+</section>
+<!-- Metrics Grid -->
+<section class="grid grid-cols-2 gap-4">
+<!-- Metric: Ventes -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="payments">payments</span>
+<span class="text-xs font-medium text-stone-500 uppercase tracking-wider">Ventes</span>
+</div>
+<p class="text-xl font-bold text-on-surface">12,450 DH</p>
+<p class="text-[10px] text-primary font-bold mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="trending_up">trending_up</span> +12%
+                </p>
+</div>
+<!-- Metric: Commandes -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-tertiary text-xl" data-icon="shopping_basket">shopping_basket</span>
+<span class="text-xs font-medium text-stone-500 uppercase tracking-wider">Commandes</span>
+</div>
+<p class="text-xl font-bold text-on-surface">28</p>
+<p class="text-[10px] text-tertiary font-bold mt-1">8 en attente</p>
+</div>
+<!-- Metric: Produits -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="inventory_2">inventory_2</span>
+<span class="text-xs font-medium text-stone-500 uppercase tracking-wider">Actifs</span>
+</div>
+<p class="text-xl font-bold text-on-surface">14</p>
+<p class="text-[10px] text-stone-400 mt-1">Miel, Huile d'Argan</p>
+</div>
+<!-- Metric: Score ONSSA -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10 flex flex-col items-center justify-center relative overflow-hidden">
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-stone-100" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-tertiary" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="31.4" stroke-width="4"></circle>
+</svg>
+<span class="absolute text-[10px] font-bold">75%</span>
+</div>
+<span class="text-[10px] font-medium text-stone-500 uppercase tracking-wider mt-2">Score ONSSA</span>
+</div>
+</section>
+<!-- Quick Actions Row -->
+<section>
+<h2 class="font-headline text-lg mb-4 flex items-center gap-2">
+                Actions Rapides
+            </h2>
+<div class="flex justify-between gap-2 overflow-x-auto pb-2 scrollbar-hide">
+<button class="flex-shrink-0 w-[82px] h-[82px] bg-surface-container-low rounded-xl flex flex-col items-center justify-center gap-1 hover:bg-stone-200 transition-colors border border-outline-variant/5">
+<span class="material-symbols-outlined text-primary" data-icon="add_box">add_box</span>
+<span class="text-[10px] font-medium">Produit</span>
+</button>
+<button class="flex-shrink-0 w-[82px] h-[82px] bg-surface-container-low rounded-xl flex flex-col items-center justify-center gap-1 hover:bg-stone-200 transition-colors border border-outline-variant/5">
+<span class="material-symbols-outlined text-primary" data-icon="list_alt">list_alt</span>
+<span class="text-[10px] font-medium">Commandes</span>
+</button>
+<button class="flex-shrink-0 w-[82px] h-[82px] bg-surface-container-low rounded-xl flex flex-col items-center justify-center gap-1 hover:bg-stone-200 transition-colors border border-outline-variant/5">
+<span class="material-symbols-outlined text-primary" data-icon="workspace_premium">workspace_premium</span>
+<span class="text-[10px] font-medium">Certif.</span>
+</button>
+<button class="flex-shrink-0 w-[82px] h-[82px] bg-surface-container-low rounded-xl flex flex-col items-center justify-center gap-1 hover:bg-stone-200 transition-colors border border-outline-variant/5">
+<span class="material-symbols-outlined text-primary" data-icon="school">school</span>
+<span class="text-[10px] font-medium">Formation</span>
+</button>
+</div>
+</section>
+<!-- Recent Orders Table -->
+<section class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-outline-variant/10">
+<div class="p-4 border-b border-stone-100 flex justify-between items-center">
+<h2 class="font-headline text-md">Commandes Récentes</h2>
+<button class="text-primary text-xs font-semibold">Voir tout</button>
+</div>
+<div class="divide-y divide-stone-50">
+<!-- Order Row 1 -->
+<div class="p-4 flex justify-between items-center">
+<div class="flex gap-3">
+<div class="w-10 h-10 bg-stone-100 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-stone-400" data-icon="local_mall">local_mall</span>
+</div>
+<div>
+<p class="text-sm font-bold">#ORD-2849</p>
+<p class="text-[10px] text-stone-500">Miel d'Euphorbe (x2)</p>
+</div>
+</div>
+<div class="text-right">
+<span class="stamp-status px-2 py-0.5 bg-tertiary/10 text-tertiary text-[10px] font-bold border border-tertiary/20 uppercase tracking-tighter">En cours</span>
+<p class="text-xs font-bold mt-1">450 DH</p>
+</div>
+</div>
+<!-- Order Row 2 -->
+<div class="p-4 flex justify-between items-center">
+<div class="flex gap-3">
+<div class="w-10 h-10 bg-stone-100 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-stone-400" data-icon="local_mall">local_mall</span>
+</div>
+<div>
+<p class="text-sm font-bold">#ORD-2845</p>
+<p class="text-[10px] text-stone-500">Huile d'Argan 250ml</p>
+</div>
+</div>
+<div class="text-right">
+<span class="stamp-status px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase tracking-tighter">Livré</span>
+<p class="text-xs font-bold mt-1">320 DH</p>
+</div>
+</div>
+<!-- Order Row 3 -->
+<div class="p-4 flex justify-between items-center">
+<div class="flex gap-3">
+<div class="w-10 h-10 bg-stone-100 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-stone-400" data-icon="local_mall">local_mall</span>
+</div>
+<div>
+<p class="text-sm font-bold">#ORD-2842</p>
+<p class="text-[10px] text-stone-500">Amoulou Traditionnel</p>
+</div>
+</div>
+<div class="text-right">
+<span class="stamp-status px-2 py-0.5 bg-secondary/10 text-secondary text-[10px] font-bold border border-secondary/20 uppercase tracking-tighter">Annulé</span>
+<p class="text-xs font-bold mt-1">120 DH</p>
+</div>
+</div>
+</div>
+</section>
+<!-- RTL Support Preview (Mini) -->
+<section class="bg-surface-container-low p-4 rounded-xl flex items-center justify-between" dir="rtl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="language">language</span>
+<span class="font-headline text-sm font-bold">النسخة العربية متاحة</span>
+</div>
+<button class="text-xs text-primary underline font-medium">تبديل اللغة</button>
+</section>
+</main>
+<!-- SideNavBar (Mobile Bottom Version) -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-[390px] mx-auto bg-white/90 backdrop-blur-lg flex justify-between items-center px-6 py-3 border-t border-stone-100 z-50">
+<!-- Dashboard (Active) -->
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter">Dashboard</span>
+</div>
+<!-- My Products -->
+<div class="flex flex-col items-center gap-1 text-stone-400">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="text-[9px] font-medium uppercase tracking-tighter">Produits</span>
+</div>
+<!-- Add CTA (Floating Style) -->
+<div class="relative -top-6">
+<div class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-lg shadow-primary/30 border-4 border-background">
+<span class="material-symbols-outlined text-2xl" data-icon="add">add</span>
+</div>
+</div>
+<!-- Orders -->
+<div class="flex flex-col items-center gap-1 text-stone-400">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="text-[9px] font-medium uppercase tracking-tighter">Commandes</span>
+</div>
+<!-- Settings -->
+<div class="flex flex-col items-center gap-1 text-stone-400">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[9px] font-medium uppercase tracking-tighter">Profil</span>
+</div>
+</nav>
+</body></html>

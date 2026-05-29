@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600;700&amp;family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#002118",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#cfa701",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "secondary-container": "#fc6451",
+                        "on-surface": "#1b1b1b",
+                        "tertiary-fixed-dim": "#ecc22c",
+                        "secondary-fixed-dim": "#ffb4a9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#bec9c3",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#b02d21",
+                        "on-tertiary-fixed": "#231b00",
+                        "primary": "#00513f",
+                        "on-background": "#1b1b1b",
+                        "on-secondary-fixed": "#410000",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#f0eded",
+                        "outline": "#6f7a74",
+                        "tertiary": "#735c00",
+                        "primary-fixed-dim": "#82d7ba",
+                        "surface-container-high": "#eae7e7",
+                        "inverse-surface": "#313030",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#94e8cb",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface": "#fcf9f8",
+                        "on-surface-variant": "#3e4944",
+                        "on-tertiary-container": "#4e3e00",
+                        "primary-container": "#006b54",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-tint": "#016b54",
+                        "on-primary-fixed-variant": "#00513f",
+                        "tertiary-fixed": "#ffe085",
+                        "background": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-secondary-container": "#650001",
+                        "surface-dim": "#dcd9d9",
+                        "secondary-fixed": "#ffdad5",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#8e130c",
+                        "surface-bright": "#fcf9f8",
+                        "primary-fixed": "#9ef3d6",
+                        "inverse-primary": "#82d7ba",
+                        "surface-variant": "#e5e2e1"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"],
+                        "arabic": ["Amiri", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+    display: inline-block;
+    line-height: 1
+    }
+.zellige-stamp {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transform: rotate(-2deg)
+    }
+.custom-scrollbar::-webkit-scrollbar {
+    display: none
+    }
+.custom-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none
+    }
+.grainy-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDIveScvTKdoLJcXTnL5DmH_BFxTBXVTPl9h6GxGHw9wOMijio0IU9b1uiMl3ktQP4mC5P1FJ54VVMxU06tEITg9Tuf5PNy2oQX183UeEqOpzE2KbaB88IJOYwKJBM5vS8TI4QqK_8SCCEA7bDkyG5ZJlVarin05_cr3urJoYpBYmNTiwuM1F5GIVDzOF8coxswwwng2MjaUZnOUSTdh41jw3VW_sIqMAcsD1OXp_JE2cDdNop9FxXjE2d6F1C90a9A-SCh3dn1-7-C);
+    background-blend-mode: soft-light
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed-dim max-w-[390px] mx-auto shadow-2xl grainy-bg relative overflow-x-hidden min-h-screen">
+<!-- Top Navigation Bar (Task-Focused: Sub-page) -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md max-w-[390px] mx-auto">
+<div class="flex items-center justify-between px-4 h-14">
+<div class="flex items-center gap-3">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<div class="flex items-center text-[10px] uppercase tracking-widest text-on-surface-variant font-label gap-1">
+<span>Terroir</span>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-primary font-bold">Dattes</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-on-surface">share</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-on-surface">favorite</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Product Image -->
+<header class="relative w-full h-[260px] mt-14 overflow-hidden">
+<img alt="Dattes Medjoul Premium" class="w-full h-full object-cover" data-alt="Dattes Medjoul brunes et charnues sur un plateau artisanal" src=""/>
+<!-- Zellige Stamp Badge -->
+<div class="absolute bottom-4 left-4 z-10">
+<div class="zellige-stamp bg-tertiary p-3 flex flex-col items-center justify-center shadow-lg border-2 border-tertiary-fixed">
+<span class="text-[8px] font-bold text-white uppercase tracking-tighter">Certifié</span>
+<span class="text-[10px] font-headline font-bold text-white leading-none">IGP</span>
+<span class="text-[8px] italic text-white/90">El Mangoub</span>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="px-6 py-8 space-y-8 bg-surface">
+<!-- Product Identity -->
+<section class="space-y-4">
+<div class="space-y-1">
+<div class="flex justify-between items-start">
+<h1 class="text-2xl font-headline font-bold text-primary leading-tight">Dattes Medjoul Premium</h1>
+<div class="flex items-center gap-1 bg-tertiary-container/10 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-tertiary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-tertiary">4.9</span>
+</div>
+</div>
+<p class="text-xl font-arabic text-primary/80 dir-rtl" dir="rtl">تمر المجهول الممتاز</p>
+<a class="inline-flex items-center text-xs font-medium text-secondary hover:underline gap-1" href="#">
+<span class="material-symbols-outlined text-sm">store</span>
+                    Coopérative Beldi, Errachidia
+                </a>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-bold text-primary">85</span>
+<span class="text-lg font-headline font-medium text-primary">MAD</span>
+</div>
+</section>
+<!-- Product Selectors -->
+<section class="space-y-6">
+<!-- Weight Selector -->
+<div class="space-y-3">
+<label class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">Format du Coffret</label>
+<div class="flex gap-2">
+<button class="px-4 py-2 rounded-xl border border-primary bg-primary text-white text-sm font-medium transition-all">250g</button>
+<button class="px-4 py-2 rounded-xl border border-outline-variant text-on-surface-variant text-sm font-medium hover:border-primary transition-all">500g</button>
+<button class="px-4 py-2 rounded-xl border border-outline-variant text-on-surface-variant text-sm font-medium hover:border-primary transition-all">1kg</button>
+</div>
+</div>
+<!-- Quantity & CTA -->
+<div class="flex items-center gap-4 pt-2">
+<div class="flex items-center bg-surface-container-high rounded-xl p-1">
+<button class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-highest rounded-lg">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-8 text-center font-bold text-sm">1</span>
+<button class="w-10 h-10 flex items-center justify-center hover:bg-surface-container-highest rounded-lg">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<button class="flex-1 h-12 bg-primary text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">shopping_basket</span>
+                    Ajouter au panier
+                </button>
+</div>
+</section>
+<!-- Information Accordions -->
+<section class="space-y-px bg-outline-variant/20 rounded-xl overflow-hidden">
+<!-- Item 1 -->
+<div class="bg-surface-container-low p-4">
+<button class="w-full flex justify-between items-center text-left">
+<span class="text-sm font-bold text-primary">Description &amp; Origine</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="mt-4 text-xs leading-relaxed text-on-surface-variant space-y-2">
+<p>Issues de la palmeraie d'El Mangoub, ces dattes sont sélectionnées à la main pour leur calibre exceptionnel et leur texture onctueuse.</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-1 flex-shrink-0"></span>
+<span>Récolte 2024 - Qualité Supérieure</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mt-1 flex-shrink-0"></span>
+<span>Sans sucres ajoutés, séchage naturel</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-low p-4">
+<button class="w-full flex justify-between items-center text-left">
+<span class="text-sm font-bold text-primary">Traçabilité</span>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</button>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-low p-4">
+<button class="w-full flex justify-between items-center text-left">
+<span class="text-sm font-bold text-primary">Livraison</span>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</button>
+</div>
+</section>
+<!-- Related Products -->
+<section class="space-y-4">
+<div class="flex justify-between items-end">
+<h3 class="text-lg font-headline font-bold text-primary">De la même coopérative</h3>
+<a class="text-[10px] font-bold uppercase text-secondary tracking-widest" href="#">Voir tout</a>
+</div>
+<div class="flex gap-4 overflow-x-auto custom-scrollbar -mx-6 px-6 pb-4">
+<!-- Item 1 -->
+<div class="min-w-[160px] space-y-2 group">
+<div class="aspect-square bg-surface-container-high rounded-2xl overflow-hidden">
+<img alt="Miel d'Euphorbbe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Petit pot de miel ambré avec cuillère en bois" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWB1qlrAMz7fDPEZ4N3Y9DLnQK0M1kPgLUQYYSzTvLev78xiTS4D40vbbQXH4ETKa01q5DhT2mxOc1We7gMta8mpUrwK8-VJj6esMfhH-i9fJa_oPGYFfA4_BKhTJQJLlpZ6zFU4FKE8-iGW03Hxg-t5Np4qIyjHt7i3On1kp7WFkxrF2H_HkemGdq0PmTZxUh5aSJQc4yTOnkKrqpgUdpZk1xKfCAMqt6p1NXAZb02B3SbeX7Wx_9J9ypHTUe3JbPkBI473CtM069"/>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface truncate">Miel d'Euphorbe (Daghmous)</p>
+<p class="text-[10px] text-on-surface-variant">120 MAD</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="min-w-[160px] space-y-2 group">
+<div class="aspect-square bg-surface-container-high rounded-2xl overflow-hidden">
+<img alt="Huile d'Olive Beldi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Bouteille d'huile d'olive dorée dans un décor rustique" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL3Yan9vIc6ESlEwLjPxH7mEs3As0Ucsr7Fc1mNCH3a8TLQRQsR2GNRMXtYRsggW26sLSCrAiPv9Ybrwj1Fi7vdWiBbHyRF748uNV0a25GIAJ7j8uEdxVDErFocRhdDV5iVf4kSMJKot8qngjWCfovvfPXiklSABqrmACNuy-CTVK5MdZ2ADEPblUpFcsp_GZ1bYEG9cR3Q-w5yxxoIcwx9Asc0kmog31TyVCVJviXi4TXXo88Qyy-Yf-sn6iJUH_nR3rRBCuMl9HI"/>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface truncate">Huile d'Olive Beldi 1L</p>
+<p class="text-[10px] text-on-surface-variant">95 MAD</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="min-w-[160px] space-y-2 group">
+<div class="aspect-square bg-surface-container-high rounded-2xl overflow-hidden">
+<img alt="Amlou Amandes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Pot de pâte à tartiner Amlou traditionnelle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8cV6GYtdaQ_O5ljPS5J7ODMj9W0X7cX6VhZUEjbau31mBYMCZwpO8GUl0Ib3yU3tole3-vbTt7LzYSpqBAlS3-SMM9SvqriEPQgdD1Zsl8Jy7pCSRFQ8a-5zVf0v1mpISqzI2HWzK879m814nOFrSx41DWYd3qvvRnX877CBwhtD5sx7WzOQOLmbCT0FuvL7vivubW3kWXFz3uHrWrcwJvsxiX47K3llbTYfwKPcIh05MZTQrRBN36rFpZ-K4iQIg5Z2axBbRnvN6"/>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface truncate">Amlou Amandes &amp; Miel</p>
+<p class="text-[10px] text-on-surface-variant">145 MAD</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Simple Bottom Sticky CTA (Mobile Pattern) -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-surface/95 backdrop-blur-sm border-t border-outline-variant/10 md:hidden max-w-[390px] mx-auto z-40">
+<div class="flex items-center justify-between gap-6">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold tracking-wider">Total</span>
+<span class="text-lg font-headline font-bold text-primary">85.00 MAD</span>
+</div>
+<button class="flex-1 h-12 bg-primary text-white rounded-xl font-bold text-sm shadow-xl active:scale-95 transition-transform">
+                Payer l'Artisan
+            </button>
+</div>
+</div>
+<!-- Spacer for Sticky Footer -->
+<div class="h-24"></div>
+<!-- Footer from JSON -->
+<footer class="w-full pt-16 pb-8 bg-[#00513f] flex flex-col items-center gap-8 px-10">
+<div class="font-serif text-3xl italic text-[#fcf9f8]">MANTOUJI</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-sans text-xs uppercase tracking-widest text-[#fcf9f8]/60 hover:text-white transition-colors" href="#">Mentions Légales</a>
+<a class="font-sans text-xs uppercase tracking-widest text-[#fcf9f8]/60 hover:text-white transition-colors" href="#">Politique de Confidentialité</a>
+<a class="font-sans text-xs uppercase tracking-widest text-[#fcf9f8]/60 hover:text-white transition-colors" href="#">Contact</a>
+<a class="font-sans text-xs uppercase tracking-widest text-[#fcf9f8]/60 hover:text-white transition-colors" href="#">Devenir Partenaire</a>
+</nav>
+<p class="font-sans text-[10px] uppercase tracking-widest text-[#fcf9f8]/40 text-center">
+            © 2024 MANTOUJI. Le Patrimoine du Terroir Marocain.
+        </p>
+</footer>
+</body></html>

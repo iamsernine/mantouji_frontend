@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9f8f6;
+  --foreground: #2b2b2b;
+  --cream: #f9f8f6;
+  --sand: #e6dfd1;
+  --burgundy: #5d2a26;
+  --burgundy-dark: #4a211e;
+  --terracotta: #cc7a60;
+  --terracotta-dark: #9a401f;
+  --sage: #50652a;
+  --sage-light: #e8efe0;
+  --sage-dark: #3d4f20;
+  --olive: #1b4345;
+  --charcoal: #2b2b2b;
+  --muted: #56423c;
+  --gold: #cfaa71;
+  --gold-light: #f5e6b8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-burgundy: var(--burgundy);
+  --color-burgundy-dark: var(--burgundy-dark);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-dark: var(--terracotta-dark);
+  --color-sage: var(--sage);
+  --color-sage-light: var(--sage-light);
+  --color-sage-dark: var(--sage-dark);
+  --color-olive: var(--olive);
+  --color-charcoal: var(--charcoal);
+  --color-muted: var(--muted);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-serif: var(--font-serif), Georgia, serif;
+}
+
+html {
+  overflow-x: clip;
+  width: 100%;
+}
+
+body {
+  overflow-x: clip;
+  width: 100%;
+  max-width: 100%;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@layer utilities {
+  .hide-scrollbars {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbars::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* react-tooltip — Morocco map */
+.morocco-region-tooltip {
+  z-index: 60;
+}
+
+/* Morocco map — stable CSS-only ambient motion (no layout shift) */
+@keyframes map-glow-opacity {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes map-particle-opacity {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.map-glow-pulse {
+  animation: map-glow-opacity 8s ease-in-out infinite;
+  will-change: opacity;
+}
+
+.map-glow-pulse-slow {
+  animation: map-glow-opacity 11s ease-in-out infinite;
+  will-change: opacity;
+}
+
+.map-particle-pulse {
+  animation: map-particle-opacity 5s ease-in-out infinite;
+  will-change: opacity;
+}
+
+.morocco-map-svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  pointer-events: auto;
+}
+
+.morocco-map-svg path {
+  pointer-events: all;
+}

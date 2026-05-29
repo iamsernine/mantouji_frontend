@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notre Histoire | Heritage Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;family=Amiri:ital,wght@0,400;0,700;1,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#fcf9f8",
+                    "primary-fixed-dim": "#82d7ba",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "on-tertiary-fixed": "#231b00",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1b1b",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-secondary-container": "#650001",
+                    "inverse-primary": "#82d7ba",
+                    "inverse-on-surface": "#f3f0ef",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#016b54",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#fc6451",
+                    "tertiary-fixed-dim": "#ecc22c",
+                    "surface": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "tertiary-fixed": "#ffe085",
+                    "secondary-fixed": "#ffdad5",
+                    "inverse-surface": "#313030",
+                    "tertiary-container": "#cfa701",
+                    "on-surface": "#1b1b1b",
+                    "on-secondary-fixed-variant": "#8e130c",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "secondary": "#b02d21",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#3e4944",
+                    "on-primary-fixed-variant": "#00513f",
+                    "tertiary": "#735c00",
+                    "on-primary-container": "#94e8cb",
+                    "secondary-fixed-dim": "#ffb4a9",
+                    "outline-variant": "#bec9c3",
+                    "primary-container": "#006b54",
+                    "primary-fixed": "#9ef3d6",
+                    "on-secondary-fixed": "#410000",
+                    "surface-container": "#f0eded",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#002118",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dcd9d9",
+                    "outline": "#6f7a74",
+                    "on-tertiary-container": "#4e3e00",
+                    "surface-variant": "#e5e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fcf9f8",
+                    "primary": "#00513f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif", "Amiri"],
+                    "display": ["Noto Serif", "Amiri"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24
+    }
+.paper-texture {
+    position: relative
+    }
+.paper-texture::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.02;
+    pointer-events: none;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBQrNvxr__GJf8f7cnX19kzi_ZoeBUd--ercCUlTGyuNXiNOylnl-bvRw0zMKJT4rBGjVoyicXhpO8Om4cME9gsPaWWoy746mciXx5J_OCrojfCyWvwHwfEVh8PNufQf9G0i5YmMf1cU7VxjgmWa5uPp2RcqbaRKgsB910mBG_sSgz_xX4DTNoW9O8n10dr8o4lcMY5k-DYsUNBtbTxRzGq213e_SA2ScxEodcvog2nTaTbFdQnUGNJQoVwzECjxvq_VANfgtWDQH8t)
+    }
+.zellige-stamp {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transform: rotate(-2deg)
+    }
+.glass-nav {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body paper-texture selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-surface/80 glass-nav shadow-sm">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:opacity-70 transition-all" onclick="toggleDrawer()">menu</span>
+<h1 class="font-headline text-2xl font-bold text-secondary tracking-tight">Heritage Excellence</h1>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<nav class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest" href="#">Home</a>
+<a class="text-primary font-bold font-label text-sm uppercase tracking-widest" href="#">Our Story</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest" href="#">Artisans</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center bg-surface-container rounded-full px-3 py-1 text-[10px] font-bold tracking-tighter">
+<span class="text-primary px-1">FR</span>
+<span class="text-outline-variant">|</span>
+<span class="font-headline text-xs px-1">عربي</span>
+</div>
+<span class="material-symbols-outlined text-primary cursor-pointer active:opacity-70 transition-all">shopping_bag</span>
+</div>
+</div>
+</header>
+<!-- Navigation Drawer (Hidden by default) -->
+<div class="fixed inset-0 bg-black/20 z-[60] hidden transition-opacity duration-300" id="drawer-overlay" onclick="toggleDrawer()"></div>
+<aside class="fixed top-0 left-0 h-full w-80 bg-surface z-[70] -translate-x-full transition-transform duration-300 ease-in-out shadow-2xl overflow-y-auto" id="main-drawer">
+<div class="flex flex-col h-full py-8">
+<div class="px-6 mb-8 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary-fixed-dim">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+<div>
+<p class="font-headline text-primary text-xl leading-tight">Marwan El Fassi</p>
+<p class="text-on-surface-variant text-xs">Connoisseur Member • Fez</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-4 py-3 px-6 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="font-body text-body-md">Our Story</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-6 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-body text-body-md">Terroir Map</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-6 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined">workspace_premium</span>
+<span class="font-body text-body-md">Artisans</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-6 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined">verified</span>
+<span class="font-body text-body-md">Authenticity</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-6 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-body text-body-md">Contact</span>
+</a>
+</nav>
+</div>
+</aside>
+<main class="max-w-7xl mx-auto px-6 py-8 pb-32">
+<!-- Hero Section -->
+<section class="mb-12">
+<h2 class="font-display text-4xl md:text-6xl text-primary mb-6 tracking-tight leading-none">Notre histoire</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<div class="md:col-span-7">
+<p class="text-body-md md:text-lg leading-relaxed text-on-surface-variant mb-8 first-letter:text-5xl first-letter:font-display first-letter:text-secondary first-letter:mr-2 first-letter:float-left">
+                        Chez Mantouji, nous croyons en la puissance du terroir marocain. Notre mission est de connecter les artisans passionnés et les coopératives locales directement avec vous, sans intermédiaires. Chaque produit raconte une histoire de tradition, de savoir-faire ancestral et d'authenticité. Nous nous engageons à promouvoir un commerce équitable qui valorise le travail de nos partenaires et préserve ve notre patrimoine culturel.
+                    </p>
+<blockquote class="relative pl-6 py-2 border-l-4 border-secondary mb-8">
+<p class="font-display italic text-lg md:text-xl text-on-surface leading-snug">
+                            “Le véritable trésor du Maroc ne réside pas seulement dans ses paysages, mais dans les mains de ceux qui façonnent ses merveilles avec amour et dévouement.”
+                        </p>
+</blockquote>
+</div>
+<div class="md:col-span-5 relative group">
+<div class="absolute -top-4 -left-4 w-24 h-24 zellige-stamp bg-tertiary-container flex items-center justify-center text-on-tertiary shadow-lg">
+<span class="font-headline text-[10px] uppercase font-bold tracking-widest text-center">Pure<br/>Heritage</span>
+</div>
+<div class="rounded-xl overflow-hidden shadow-2xl transform transition-transform group-hover:scale-[1.01] duration-500">
+<img alt="Artisans at work" class="w-full h-[400px] object-cover" data-alt="A cinematic, high-detail wide shot of traditional Moroccan artisans working in a sun-drenched, rustic earthen workshop. One artisan weaves an intricate geometric rug on a vertical loom while another shapes terracotta pottery in the foreground. Warm, golden hour light filters through high windows, illuminating dust particles and the rich textures of woven textiles and clay. The scene is captured in a premium editorial style with deep green and earthy red tones consistent with a heritage brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjju0a-_vdv2zejzGBjn5TJkYxRkLmbLIZHfTCftyVAttHH1q6x9AxdfncO3T_Y49jo1RXqyEvwVBGitHaPLND0uJYv4C3j7f0mVtqbLWEA_iCW_gPK5sYoOWbwyopdhCUQ3fExTRgyvR2joRiZG-ZYVry_i5Z5et-kAMDGti779r4ty9HzOWQiUCUa0oW0rZ4dXVIn8l61OufdpBKmonM8HxYIql251HfLzA6T5VkhO01kRPcaeAcc_JKI2pZFD_Ip3W7A1i_1xQS"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-surface-container-low rounded-2xl p-8 mb-12 shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-4xl">handshake</span>
+</div>
+<span class="font-display text-4xl text-primary font-bold">47</span>
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Coopératives</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined text-4xl">location_on</span>
+</div>
+<span class="font-display text-4xl text-secondary font-bold">12</span>
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Régions</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-tertiary/10 rounded-full flex items-center justify-center text-tertiary mb-4">
+<span class="material-symbols-outlined text-4xl">inventory_2</span>
+</div>
+<span class="font-display text-4xl text-tertiary font-bold">200+</span>
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Produits</span>
+</div>
+</div>
+</section>
+<!-- Action Buttons -->
+<div class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+<button class="flex-1 bg-secondary text-on-secondary font-label font-bold py-5 rounded-lg shadow-lg hover:brightness-110 active:scale-95 transition-all uppercase tracking-widest text-sm">
+                Découvrir le catalogue
+            </button>
+<button class="flex-1 bg-primary/10 border border-primary/20 text-primary font-label font-bold py-5 rounded-lg hover:bg-primary/20 active:scale-95 transition-all uppercase tracking-widest text-sm">
+                Voir les coopératives
+            </button>
+</div>
+</main>
+<!-- Footer Branding -->
+<footer class="bg-primary text-white py-12 text-center paper-texture">
+<div class="flex flex-col items-center gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<h3 class="font-headline text-3xl font-bold tracking-widest uppercase">MANTOUJĪ</h3>
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body text-primary-fixed opacity-70 text-sm">Authentique • Durable • Fait main</p>
+<div class="mt-8 flex gap-6">
+<span class="material-symbols-outlined cursor-pointer hover:text-tertiary-fixed transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-tertiary-fixed transition-colors">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-tertiary-fixed transition-colors">favorite</span>
+</div>
+</div>
+</footer>
+<!-- Bottom Navigation Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl flex justify-around items-center px-4 py-3 pb-safe shadow-[0px_-4px_12px_rgba(27,27,27,0.04)]">
+<div class="flex flex-col items-center justify-center text-outline transition-transform active:scale-90 duration-200">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-outline transition-transform active:scale-90 duration-200">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1">Explorer</span>
+</div>
+<div class="flex flex-col items-center justify-center text-primary font-bold transition-transform active:scale-90 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">history_edu</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1">Story</span>
+</div>
+<div class="flex flex-col items-center justify-center text-outline transition-transform active:scale-90 duration-200">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1">Account</span>
+</div>
+</nav>
+<script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('main-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const isHidden = drawer.classList.contains('-translate-x-full');
+            
+            if (isHidden) {
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+            } else {
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+            }
+        }
+
+        // Simple scroll parallax for atmospheric effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImg = document.querySelector('img[data-alt]');
+            if (heroImg) {
+                heroImg.style.transform = `translateY(${scrolled * 0.05}px)`;
+            }
+        });
+    </script>
+</body></html>

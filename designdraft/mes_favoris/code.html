@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heritage Excellence - Mes Favoris</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#fcf9f8",
+              "primary-fixed-dim": "#82d7ba",
+              "on-tertiary-fixed-variant": "#574500",
+              "on-tertiary-fixed": "#231b00",
+              "on-primary": "#ffffff",
+              "on-background": "#1b1b1b",
+              "surface-container-highest": "#e5e2e1",
+              "on-secondary-container": "#650001",
+              "inverse-primary": "#82d7ba",
+              "inverse-on-surface": "#f3f0ef",
+              "error": "#ba1a1a",
+              "surface-tint": "#016b54",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#fc6451",
+              "tertiary-fixed-dim": "#ecc22c",
+              "surface": "#fcf9f8",
+              "surface-container-low": "#f6f3f2",
+              "tertiary-fixed": "#ffe085",
+              "secondary-fixed": "#ffdad5",
+              "inverse-surface": "#313030",
+              "tertiary-container": "#cfa701",
+              "on-surface": "#1b1b1b",
+              "on-secondary-fixed-variant": "#8e130c",
+              "on-secondary": "#ffffff",
+              "surface-container-high": "#eae7e7",
+              "secondary": "#b02d21",
+              "error-container": "#ffdad6",
+              "on-surface-variant": "#3e4944",
+              "on-primary-fixed-variant": "#00513f",
+              "tertiary": "#735c00",
+              "on-primary-container": "#94e8cb",
+              "secondary-fixed-dim": "#ffb4a9",
+              "outline-variant": "#bec9c3",
+              "primary-container": "#006b54",
+              "primary-fixed": "#9ef3d6",
+              "on-secondary-fixed": "#410000",
+              "surface-container": "#f0eded",
+              "on-error": "#ffffff",
+              "on-primary-fixed": "#002118",
+              "on-error-container": "#93000a",
+              "surface-dim": "#dcd9d9",
+              "outline": "#6f7a74",
+              "on-tertiary-container": "#4e3e00",
+              "surface-variant": "#e5e2e1",
+              "surface-container-lowest": "#ffffff",
+              "surface-bright": "#fcf9f8",
+              "primary": "#00513f"
+            },
+            borderRadius: {
+              "DEFAULT": "0.125rem",
+              "lg": "0.25rem",
+              "xl": "0.5rem",
+              "full": "0.75rem"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "Amiri", "serif"],
+              "display": ["Noto Serif", "Amiri", "serif"],
+              "body": ["Inter", "Noto Sans Arabic", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+    vertical-align: middle
+    }
+.font-headline {
+    font-family: "Noto Serif", "Amiri", serif
+    }
+.font-body {
+    font-family: "Inter", sans-serif
+    }
+/* Subtle Paper Texture Overlay */
+.paper-overlay::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.02;
+    pointer-events: none;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCg7HdZqIdNaUlfFoYPlZg_HIC9_cS86HStedKhojtjSfCRQk0rUZIv9BVqEf94IqVvKyD4RHIhcJeiYtLsJNP1APlqsYRIHrkYLgKvl-nzQMIn5JfQuORbTbdLmFnyHxU6xP6kszUFY49ePni5dD21rzoiH9PtgTLpHKAcpZFXiXbQl-8-kx6skYEN7HVmZZ2LcH01DUPdZ4gqbjh3CneORAr0d_EY_51Zl_-ejj7oN2RVlG5lzWf0sbfcFq7mZ-uP70TT3hzvm5E5);
+    z-index: 9999
+    }
+/* Custom scroll hide */
+.no-scrollbar::-webkit-scrollbar {
+    display: none
+    }
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/20 paper-overlay min-h-screen">
+<!-- TopAppBar (Mapped from JSON) -->
+<nav class="w-full top-0 sticky z-50 bg-surface dark:bg-surface shadow-sm">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:opacity-70 transition-all">menu</span>
+<h1 class="font-headline text-2xl font-bold text-secondary dark:text-secondary-fixed-dim tracking-tight">Heritage Excellence</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex gap-6 items-center">
+<span class="font-label text-sm uppercase tracking-widest text-outline cursor-pointer hover:text-primary transition-colors">Explorer</span>
+<span class="font-label text-sm uppercase tracking-widest text-primary font-bold cursor-pointer transition-colors">Favoris</span>
+</div>
+<div class="bg-surface-container-high px-3 py-1 rounded-full text-[10px] font-bold flex items-center gap-2">
+<span class="text-primary">FR</span>
+<span class="text-outline">|</span>
+<span class="font-headline">عربي</span>
+</div>
+<span class="material-symbols-outlined text-primary cursor-pointer active:opacity-70 transition-all">shopping_bag</span>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="max-w-7xl mx-auto px-6 pt-8 pb-32">
+<!-- Hero Header -->
+<header class="mb-10 animate-in fade-in duration-700">
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface mb-2 font-bold tracking-tight">Mes favoris</h2>
+<p class="text-on-surface-variant font-body text-body-md max-w-lg">
+                Une sélection curatoriale de vos trésors du terroir marocain, sauvegardés pour leur excellence et leur authenticité.
+            </p>
+</header>
+<!-- Favorites Grid/List -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex flex-col sm:flex-row gap-6 shadow-[0px_4px_12px_rgba(27,27,27,0.04)] hover:shadow-[0px_12px_32px_rgba(27,27,27,0.06)] transition-all duration-500 group border border-outline-variant/10">
+<div class="w-full sm:w-48 md:w-64 aspect-[4/3] overflow-hidden rounded-lg">
+<img alt="Huile d'Argan du Souss" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A premium clear glass bottle of golden Argan oil sitting on a rustic stone surface next to fresh olives and argan nuts. The lighting is soft and warm, characteristic of a Mediterranean sunset, highlighting the rich amber tones of the oil. The aesthetic is high-end artisanal, with a clean cream-colored background and subtle textures. The mood is sophisticated and authentic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrTOU8ALqBJy9SCjC9X0q87_PB6gSouOSPYTfPac21H9UiSbFl2e36xe7_CRxIiXmLMR3j0Ub4lvgpvQr1zljTRDa2NYLCTpvomswhZ8aUpMAowDeCmH4aSP97UchnHyf-x5bpWijtAMG08wLFxNhdJId17KKyqsIy8WrBevPNo12q2RGy8djFHp0RiYofjxXjWV_3UDK7YBX-Iijy4LiJoV26K_W4BndtfVomkpS0wDod1Q4_HA_JOd5ds2iMVeE5qMppojx2UMnW"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-xl md:text-2xl text-on-surface group-hover:text-primary transition-colors">Huile d'Argan du Souss</h3>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<p class="text-tertiary font-bold text-lg mt-1">250 DH</p>
+<div class="flex flex-wrap gap-4 mt-4 text-on-surface-variant text-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">category</span>
+<span>Huiles</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">location_on</span>
+<span>Souss-Massa</span>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between border-t border-outline-variant/10 pt-4">
+<a class="flex items-center gap-2 text-primary font-bold hover:underline transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span class="text-sm">Contacter via WhatsApp</span>
+</a>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-bold active:scale-95 transition-all">
+                            Détails
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex flex-col sm:flex-row gap-6 shadow-[0px_4px_12px_rgba(27,27,27,0.04)] hover:shadow-[0px_12px_32px_rgba(27,27,27,0.06)] transition-all duration-500 group border border-outline-variant/10">
+<div class="w-full sm:w-48 md:w-64 aspect-[4/3] overflow-hidden rounded-lg">
+<img alt="Safran de Taliouine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Detailed close-up of vivid red saffron strands overflowing from a small, hand-carved wooden bowl sitting on a dark, moody granite surface. Dramatic side lighting emphasizes the delicate texture and deep crimson color of the spice. The atmosphere is luxurious and editorial, emphasizing the rare and precious nature of the Taliouine saffron against a neutral, warm background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpP04KSDw2O35WIJbs6dq7_nP1ndAxpmHF6E7qib6mDvFRZiZ7n9NmVX3LLS1yy5hk5XQ6zYw_aKJxQ8sSv58LETWMeE0ZkwJnLlGfShPYkwQO-o8i7UU_0GgApyvU07clhLg-wgws0A9-yZqNvHw9ZjeOqao1E2eQLBXx41NQ7MjwbUvkPvKAjjwYN_VZUjZpjFUpWYwow8Ltpluems44hJLX1h7Vc5isPQRFpQR9xVPG1lqo21cAOguavQyhYgdEsYiwnlpEqUda"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-xl md:text-2xl text-on-surface group-hover:text-primary transition-colors">Safran de Taliouine</h3>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<p class="text-tertiary font-bold text-lg mt-1">85 DH</p>
+<div class="flex flex-wrap gap-4 mt-4 text-on-surface-variant text-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">category</span>
+<span>Épices</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">location_on</span>
+<span>Taliouine</span>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between border-t border-outline-variant/10 pt-4">
+<a class="flex items-center gap-2 text-primary font-bold hover:underline transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span class="text-sm">Contacter via WhatsApp</span>
+</a>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-bold active:scale-95 transition-all">
+                            Détails
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex flex-col sm:flex-row gap-6 shadow-[0px_4px_12px_rgba(27,27,27,0.04)] hover:shadow-[0px_12px_32px_rgba(27,27,27,0.06)] transition-all duration-500 group border border-outline-variant/10">
+<div class="w-full sm:w-48 md:w-64 aspect-[4/3] overflow-hidden rounded-lg">
+<img alt="Miel de Thym" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A stylized, architectural honeycomb sculpture made of pure amber-colored honey, resting on a pristine white ceramic plate. A slow drip of thick honey is frozen in time, capturing light beautifully in a bright, airy studio setting. The minimalist composition uses a warm cream and gold color palette to evoke a sense of purity, organic luxury, and artisanal mastery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM8Z5Oe0OwUh_srT-LulipS_yfNiYD7iwgBtDBpH5VVEpt2r0891w9ouM9UJmorYM4cbnCncZtsCZAAsq15i41stjE2JHbS44fAd35LyUxyfc5r2WDmC3eH6OiiyGgO5NNts7KeBbWDGQRUcQzm5Q_hDNd6IEw8X3GD1NagkxR3ZsiEt7PCgR8s-zNEYUDoSdWc91xvPhnibcCqbjRrQ3soEdkyBeqhXGRfw23Llrta9gGwqr2e-dI64jUM8lSoannLeBXZiz9QAcg"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-xl md:text-2xl text-on-surface group-hover:text-primary transition-colors">Miel de Thym</h3>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<p class="text-tertiary font-bold text-lg mt-1">120 DH</p>
+<div class="flex flex-wrap gap-4 mt-4 text-on-surface-variant text-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">category</span>
+<span>Miels</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">location_on</span>
+<span>Atlas</span>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between border-t border-outline-variant/10 pt-4">
+<a class="flex items-center gap-2 text-primary font-bold hover:underline transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span class="text-sm">Contacter via WhatsApp</span>
+</a>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-bold active:scale-95 transition-all">
+                            Détails
+                        </button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex flex-col sm:flex-row gap-6 shadow-[0px_4px_12px_rgba(27,27,27,0.04)] hover:shadow-[0px_12px_32px_rgba(27,27,27,0.06)] transition-all duration-500 group border border-outline-variant/10">
+<div class="w-full sm:w-48 md:w-64 aspect-[4/3] overflow-hidden rounded-lg">
+<img alt="Couscous Beldi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A mountain of golden, perfectly steamed Beldi couscous grains served in a traditional Moroccan clay 'Gsaa' dish. The background features blurry silhouettes of traditional tagines and wooden utensils in a warm, rustic kitchen. The lighting is diffused and natural, emphasizing the organic texture of the grains. The color palette is earthy, dominated by warm browns, terracottas, and golden yellows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKXMuJS0Qg03j8w3b7IxGAeveTo0gUIfmco3KxV-2dKVmOUvmzMtgxUHGyWMRxRqRuUBAHWva8uNGQKG45m8XIVkRdmuWmmmTlRFnUVuMSYXM20zjVFxOkpQ_WUlu-6nEPa0kfm8ZzMIa1gz6cUgZEgPlneH_ydCSxpxS5v8nIGCGiO_qGHQ3wrrtt-jjQMQ_vRQ63SlLNcxgWyJOjjMIv4OTl3MI5W1RYKLUhHPR8r-s_N3F6-lG1MGwd6xXtuT1_0bGyLpVSGTLA"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-xl md:text-2xl text-on-surface group-hover:text-primary transition-colors">Couscous Beldi</h3>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<p class="text-tertiary font-bold text-lg mt-1">45 DH</p>
+<div class="flex flex-wrap gap-4 mt-4 text-on-surface-variant text-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">category</span>
+<span>Céréales</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">location_on</span>
+<span>Beni Mellal</span>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between border-t border-outline-variant/10 pt-4">
+<a class="flex items-center gap-2 text-primary font-bold hover:underline transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span class="text-sm">Contacter via WhatsApp</span>
+</a>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-bold active:scale-95 transition-all">
+                            Détails
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty state suggestion (Contextual) -->
+<section class="mt-20 text-center py-12 px-6 bg-surface-container-low rounded-full">
+<span class="material-symbols-outlined text-outline-variant text-4xl mb-4">explore</span>
+<p class="font-headline text-xl text-on-surface-variant">Découvrir d'autres trésors ?</p>
+<button class="mt-4 border border-primary text-primary px-8 py-2 rounded-full font-bold hover:bg-primary/5 transition-all">
+                Voir le catalogue
+            </button>
+</section>
+</main>
+<!-- BottomNavBar (Mapped from JSON) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface/80 dark:bg-surface/80 backdrop-blur-xl shadow-[0px_-4px_12px_rgba(27,27,27,0.04)] rounded-t-full">
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1">Explorer</span>
+</a>
+<!-- Active Tab: Favoris -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim active:scale-90 transition-transform duration-200" href="#">
+<div class="relative flex flex-col items-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold mt-1">Favoris</span>
+<div class="absolute -bottom-1 w-1 h-1 bg-primary rounded-full"></div>
+</div>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1">Compte</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1">Panier</span>
+</a>
+</nav>
+<!-- Floating Action Button (Optional, not needed for favorites detail but good for UX) -->
+<!-- FAB Suppressed as per instructions for details/specialized screens unless explicit -->
+<script>
+        // Micro-interactions
+        document.querySelectorAll('.material-symbols-outlined').forEach(icon => {
+            if(icon.innerText === 'favorite') {
+                icon.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const isFilled = icon.style.fontVariationSettings.includes("'FILL' 1");
+                    icon.style.fontVariationSettings = isFilled ? "'FILL' 0" : "'FILL' 1";
+                    // Simulate removal animation if needed
+                    if(isFilled) {
+                        icon.closest('.group').style.opacity = '0.5';
+                        setTimeout(() => {
+                            icon.closest('.group').style.display = 'none';
+                        }, 300);
+                    }
+                });
+            }
+        });
+
+        // Sticky header transition
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('backdrop-blur-md', 'bg-surface/90');
+            } else {
+                nav.classList.remove('backdrop-blur-md', 'bg-surface/90');
+            }
+        });
+    </script>
+</body></html>

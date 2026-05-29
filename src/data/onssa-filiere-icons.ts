@@ -1,0 +1,51 @@
+import {
+  Cherry,
+  CircleDot,
+  Citrus,
+  Coffee,
+  Droplets,
+  Fish,
+  Flower2,
+  Grape,
+  Hexagon,
+  Leaf,
+  Milk,
+  Mountain,
+  Nut,
+  Shell,
+  Shrimp,
+  Sparkles,
+  Sprout,
+  TreeDeciduous,
+  Wheat,
+  type LucideIcon,
+} from "lucide-react";
+
+const iconByFiliereId: Record<string, LucideIcon> = {
+  "huile-argan": Droplets,
+  "huile-olive": Droplets,
+  dattes: Cherry,
+  safran: Sparkles,
+  miel: Hexagon,
+  pam: Sprout,
+  cactus: Leaf,
+  "rose-parfum": Flower2,
+  "cereales-couscous": Wheat,
+  "fromages-laitiers": Milk,
+  "fruits-secs": Nut,
+  apiculture: Hexagon,
+  biologiques: Leaf,
+  epices: Coffee,
+  truffes: Mountain,
+  escargots: Shell,
+  caroube: TreeDeciduous,
+  grenade: Citrus,
+  "figue-barbarie": Grape,
+  "produits-forestiers": TreeDeciduous,
+  "halieutiques-transformes": Fish,
+  "viandes-transformees": Shrimp,
+};
+
+export function getFiliereIcon(filiereId: string): LucideIcon {
+  return iconByFiliereId[filiereId] ?? CircleDot;
+}

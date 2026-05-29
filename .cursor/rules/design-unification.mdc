@@ -1,0 +1,29 @@
+---
+description: Unify Mantouji UI — Stitch is inspiration only; one shared design system
+alwaysApply: true
+---
+
+# Mantouji design unification
+
+Use Stitch exports in `designdraft/` as **inspiration ONLY**.
+
+## Do NOT
+
+- Blindly copy Stitch inconsistencies (button radius, spacing, shadows, typography, card padding) across pages
+- Duplicate slightly modified Button, Card, Badge, or filter components
+- Introduce a second color system (e.g. Stitch Heritage green `#00513f`) unless explicitly migrating the whole app
+
+## DO
+
+- Reuse existing shared components from `src/components/`
+- Extend with **variants** (`variant="directory"`) instead of new near-duplicate components
+- One unified system: burgundy `#5d2a26`, sage `#50652a`, cream `#fbf9f8`, `rounded-2xl`, soft `shadow-sm`, Noto Serif + Inter
+- Same button heights (min 44px mobile), same `PageHeader`, same `Badge`, same `Button` variants
+- Before creating a component: search codebase → reuse → extend variants
+
+## Stitch → code workflow
+
+1. Read `designdraft/<folder>/code.html` or PNG for **layout and content**, not pixel-perfect Stitch tokens
+2. Map folder to route via `designdraft/README.md`
+3. Implement with Mantouji tokens and shared components
+4. No cart, checkout, or payment UI

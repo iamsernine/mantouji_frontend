@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;family=Amiri:wght@400;700&amp;family=Noto+Sans+Arabic:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#002118",
+              "error-container": "#ffdad6",
+              "tertiary-container": "#cfa701",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f3f0ef",
+              "secondary-container": "#fc6451",
+              "on-surface": "#1b1b1b",
+              "tertiary-fixed-dim": "#ecc22c",
+              "secondary-fixed-dim": "#ffb4a9",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              "outline-variant": "#bec9c3",
+              "on-secondary": "#ffffff",
+              "secondary": "#b02d21",
+              "on-tertiary-fixed": "#231b00",
+              "primary": "#00513f",
+              "on-background": "#1b1b1b",
+              "on-secondary-fixed": "#410000",
+              "on-error-container": "#93000a",
+              "surface-container": "#f0eded",
+              "outline": "#6f7a74",
+              "tertiary": "#735c00",
+              "primary-fixed-dim": "#82d7ba",
+              "surface-container-high": "#eae7e7",
+              "inverse-surface": "#313030",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#94e8cb",
+              "surface-container-highest": "#e5e2e1",
+              "surface": "#fcf9f8",
+              "on-surface-variant": "#3e4944",
+              "on-tertiary-container": "#4e3e00",
+              "primary-container": "#006b54",
+              "surface-container-low": "#f6f3f2",
+              "surface-tint": "#016b54",
+              "on-primary-fixed-variant": "#00513f",
+              "tertiary-fixed": "#ffe085",
+              "background": "#fcf9f8",
+              "on-tertiary-fixed-variant": "#574500",
+              "on-secondary-container": "#650001",
+              "surface-dim": "#dcd9d9",
+              "secondary-fixed": "#ffdad5",
+              "error": "#ba1a1a",
+              "on-secondary-fixed-variant": "#8e130c",
+              "surface-bright": "#fcf9f8",
+              "primary-fixed": "#9ef3d6",
+              "inverse-primary": "#82d7ba",
+              "surface-variant": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "Amiri", "serif"],
+              "body": ["Inter", "Noto Sans Arabic", "sans-serif"],
+              "label": ["Inter", "Noto Sans Arabic", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .zellige-pattern {
+        background-image: radial-gradient(circle at 2px 2px, rgba(0, 81, 63, 0.05) 1px, transparent 0);
+        background-size: 24px 24px;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .custom-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body min-h-screen zellige-pattern">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f8]/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-8xl mx-auto">
+<div class="flex items-center gap-6">
+<span class="text-2xl font-serif font-bold text-[#00513f] dark:text-[#006B54]">MANTOUJI</span>
+<div class="hidden md:flex gap-8">
+<a class="text-[#00513f] dark:text-[#006B54] font-bold border-b-2 border-[#00513f] pb-1 font-serif text-lg tracking-tight" href="#">Explorer</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#00513f] font-serif text-lg tracking-tight" href="#">Cooperatives</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#00513f] font-serif text-lg tracking-tight" href="#">Héritage</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#00513f] font-serif text-lg tracking-tight" href="#">Authenticité</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-full transition-colors duration-300">
+<span class="material-symbols-outlined text-[#00513f]">shopping_basket</span>
+</button>
+<button class="p-2 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-full transition-colors duration-300 md:hidden">
+<span class="material-symbols-outlined text-[#00513f]">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20 px-4 max-w-lg mx-auto md:max-w-4xl lg:max-w-7xl">
+<!-- Search Bar Section -->
+<div class="mb-6">
+<div class="relative flex items-center h-12 bg-surface-container-highest rounded-xl px-4 shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-outline-variant px-3 font-body" placeholder="Rechercher un trésor..." type="text"/>
+<span class="material-symbols-outlined text-primary">mic</span>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 overflow-x-auto pb-4 custom-scrollbar whitespace-nowrap -mx-4 px-4">
+<button class="px-4 py-2 rounded-full bg-primary text-on-primary text-sm font-medium flex items-center gap-1 shadow-md">
+<span>✦</span>
+<span>Tout</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/20 text-sm font-medium hover:bg-surface-container-high transition-colors">Dattes</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/20 text-sm font-medium hover:bg-surface-container-high transition-colors">Miel</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/20 text-sm font-medium hover:bg-surface-container-high transition-colors">Cumin</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/20 text-sm font-medium hover:bg-surface-container-high transition-colors">Huile</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/20 text-sm font-medium hover:bg-surface-container-high transition-colors">Bio</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/20 text-sm font-medium hover:bg-surface-container-high transition-colors">IGP</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/20 text-sm font-medium hover:bg-surface-container-high transition-colors">Promo</button>
+</div>
+<!-- Section Header -->
+<div class="mt-8 mb-8">
+<div class="flex items-center gap-4 mb-2">
+<h1 class="text-2xl font-headline font-bold text-on-surface">Produits de Figuig · Oriental</h1>
+<div class="flex-grow h-[1px] bg-gradient-to-l from-primary/30 to-transparent"></div>
+</div>
+<p class="text-sm text-on-surface-variant/80 font-body">Sélection authentique de la palmeraie millénaire.</p>
+</div>
+<!-- Product Grid (2 Columns Mobile, 4 Columns Desktop) -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Product Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant/5">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Dattes Medjool premium dans un panier" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB091DpXa7nblYhAYOcIhjUJQF3YlseoaQTTC2lap1FeY_23cQ1WMRflR9te5AxwbX7K0zbAMa3nqwXPo6hYcyw9Bs7xQsL92Sr-PHXV-1JZ1uS306LpmvNT39M0ytymlMmHpSh2BfTbAdpOYc0Z4bX9oPOtYeb8R4iPkXVGUL9GTb0-5DsqLf2_s4ywBvqKUpbN-7OOVqqjVyy8PN1mKRCpa50tfrNt6GEC4eT_8EDDS4qITeTc50xky3PiwHiyfFkvVgM7KMoQfsZ"/>
+<div class="absolute top-2 left-2 bg-secondary text-on-secondary text-[10px] px-2 py-1 rounded-sm font-bold uppercase tracking-widest shadow-lg transform -rotate-1">IGP Certifié</div>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<span class="text-[10px] font-label uppercase tracking-widest text-tertiary font-bold mb-1 block">Coopérative Al-Amal</span>
+<h3 class="font-headline text-base font-bold text-on-surface line-clamp-1 leading-tight mb-1">Dattes Aziza Bouzid</h3>
+<div class="flex items-center justify-between mt-3">
+<span class="text-primary font-bold text-lg">85 DH<span class="text-[10px] font-normal text-on-surface-variant/60"> /kg</span></span>
+<button class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant/5">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Miel de thym sauvage marocain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWWH2NUwHzzv5WAyhTBUTiBeVIwe7IQBjHVmZeXMOu1llYucX7BAvqIqFz-lYn_6jL9MTWEkXlttZqtH19nqsQiXEtfLR8o_F0VFuoNPW2XRp-UDNiggUwZb_KgIxKV773Fiq99E3XpaKgYzz8SQiCVTkP70pinb6nHNLIiurT5oaBsJEgeLRyvwHpyPJdsR0NW5V787u7WhczKWQkzT72Jzf5P-R0zKAaiDu0ZpjUzu7gEC337aXUHr4YFf7EzcoxHQ329l6OetJ1"/>
+<div class="absolute top-2 left-2 bg-tertiary text-on-tertiary text-[10px] px-2 py-1 rounded-sm font-bold uppercase tracking-widest shadow-lg transform rotate-2">Pur &amp; Bio</div>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<span class="text-[10px] font-label uppercase tracking-widest text-tertiary font-bold mb-1 block">Rucher de l'Oriental</span>
+<h3 class="font-headline text-base font-bold text-on-surface line-clamp-1 leading-tight mb-1">Miel de Thym Sauvage</h3>
+<div class="flex items-center justify-between mt-3">
+<span class="text-primary font-bold text-lg">240 DH<span class="text-[10px] font-normal text-on-surface-variant/60"> /pot</span></span>
+<button class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant/5">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Poudre de cumin marocain frais" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8ru3xcSHaWoYs3WiqbKRthAHgsHRi5-Og4hxp-jBGSahKQjonR_5QpUm-biK1iiyM6wsneSSGQ6eidNv3xHR-liDDEr8Ixy8O8vXjQGQtKo6ZIA8r7ZZmWEyWy-gCGq0DKelPApR52P4Lk-lHx7ITWE2LXLOFF_T9EB2gV57W1rp4hPayczw4hxPbz0W6y2llH7IaVJNklTQplfVFVZqrcc5DFujftru37BWEtpavaKnD45yQMuQ_SRj4Mq9EYWoT81MH3CmzM2zN"/>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<span class="text-[10px] font-label uppercase tracking-widest text-tertiary font-bold mb-1 block">Femmes de Figuig</span>
+<h3 class="font-headline text-base font-bold text-on-surface line-clamp-1 leading-tight mb-1">Cumin Beldi Pilé</h3>
+<div class="flex items-center justify-between mt-3">
+<span class="text-primary font-bold text-lg">45 DH<span class="text-[10px] font-normal text-on-surface-variant/60"> /100g</span></span>
+<button class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant/5">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Huile d'olive extra vierge du Maroc" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1xTvYW60SDxYl0-_Ienk2tqIXX6-lCEvDinj6iny0B7s82a2BCf2bGs5CHV7sdB1uihgV2TnNcbAbraHtUgcJdarTUcJ5pTT5ZE6W_53mwkAYDzu4UUtpU6GlKr1Gis71Vym9wJ_SH75DksO-FweYXuuMrx-v3nm1OJROZ7FW2XlnFW3lYGyNayQ4wu10fAgtDMUZlv-CzmT7-iFsVo5Di925zzgfNCm2HLOC9ZjykdqsZdpVFzw2_Txtlow9xOP7c3MpnsiR9zyS"/>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<span class="text-[10px] font-label uppercase tracking-widest text-tertiary font-bold mb-1 block">Pressage Traditionnel</span>
+<h3 class="font-headline text-base font-bold text-on-surface line-clamp-1 leading-tight mb-1">Huile d'Olive Extra Vierge</h3>
+<div class="flex items-center justify-between mt-3">
+<span class="text-primary font-bold text-lg">95 DH<span class="text-[10px] font-normal text-on-surface-variant/60"> /L</span></span>
+<button class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant/5">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Amandes de l'Atlas marocain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv8xjfIjNLyRkoHYKtxzhebFZAqugqZqsq_imNvvk6rxqT2VO6WCxzCHDoQ5xuWl4dvgMJP7S0Xd5yGWZA7O8Ms12L7JFJ0QDArMY2jUO17MuP-uLiR_GcHOuKmetZTid3aRsVZFDmQWEE_B1Z63l-lsPHzrNJmh4b4-yG0-E-mFZ7rCvKEJXlCFGDhrEYO8ambXpGh3GxjtnKaedTuXylbAiFvlDD3x86Szb1lTdYss4FIolrFHEAe43brFWvTit8AT9AfR6eifN-"/>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<span class="text-[10px] font-label uppercase tracking-widest text-tertiary font-bold mb-1 block">Récolte Manuelle</span>
+<h3 class="font-headline text-base font-bold text-on-surface line-clamp-1 leading-tight mb-1">Amandes Douces de l'Atlas</h3>
+<div class="flex items-center justify-between mt-3">
+<span class="text-primary font-bold text-lg">165 DH<span class="text-[10px] font-normal text-on-surface-variant/60"> /kg</span></span>
+<button class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-outline-variant/5">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Figues séchées au soleil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxtcKwWGwYPTU1fp_GnapEGcBAubmQN3JkQqPZ4jAyu8_ixPr8V1ZmHS8YC83ivwylKRHf3Ri90Y1p_YUlcodiDx_h8_cESSOs8wAPwbUoPXAyeMiM00QMxxHT7M_0iaoBsllWjBoQOkpGV1zOXFOSiSXxC4W_d_-JCw7nbtRDdZZieSfNgKDVP7cbNJwpkwNc4RB5pkm5hX4JCP46HsYBU7nMXrAKjLmZXk8c78K9ryJT8AAlhck18ERmZYugps46gk-teaBkT2k5"/>
+<div class="absolute top-2 left-2 bg-secondary text-on-secondary text-[10px] px-2 py-1 rounded-sm font-bold uppercase tracking-widest shadow-lg transform rotate-1">Populaire</div>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<span class="text-[10px] font-label uppercase tracking-widest text-tertiary font-bold mb-1 block">Oasis de Figuig</span>
+<h3 class="font-headline text-base font-bold text-on-surface line-clamp-1 leading-tight mb-1">Figues Séchées Artisanales</h3>
+<div class="flex items-center justify-between mt-3">
+<span class="text-primary font-bold text-lg">70 DH<span class="text-[10px] font-normal text-on-surface-variant/60"> /500g</span></span>
+<button class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-6 right-6 bg-primary text-on-primary px-6 py-4 rounded-full flex items-center gap-3 shadow-2xl z-50 hover:bg-primary-container transition-all duration-300 transform hover:scale-105 active:scale-95 group">
+<span class="material-symbols-outlined group-hover:rotate-12 transition-transform">location_on</span>
+<span class="font-bold text-sm tracking-widest uppercase">Carte</span>
+</button>
+<!-- Footer (Standard Shell) -->
+<footer class="w-full pt-16 pb-8 bg-[#00513f] dark:bg-stone-950 flex flex-col items-center gap-8 px-10">
+<span class="font-serif text-3xl italic text-[#fcf9f8]">MANTOUJI</span>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-sans text-xs uppercase tracking-widest text-[#fcf9f8]/60 hover:text-white transition-colors duration-300" href="#">Mentions Légales</a>
+<a class="font-sans text-xs uppercase tracking-widest text-[#fcf9f8]/60 hover:text-white transition-colors duration-300" href="#">Politique de Confidentialité</a>
+<a class="font-sans text-xs uppercase tracking-widest text-[#fcf9f8]/60 hover:text-white transition-colors duration-300" href="#">Contact</a>
+<a class="font-sans text-xs uppercase tracking-widest text-[#fcf9f8]/60 hover:text-white transition-colors duration-300" href="#">Devenir Partenaire</a>
+</div>
+<div class="h-[1px] w-1/4 bg-white/10"></div>
+<p class="font-sans text-[10px] uppercase tracking-[0.2em] text-[#fcf9f8]/80">© 2024 MANTOUJI. Le Patrimoine du Terroir Marocain.</p>
+</footer>
+<!-- RTL Support Alignment Adjustment -->
+<style>
+        [dir="rtl"] .material-symbols-outlined {
+            transform: scaleX(-1);
+        }
+        /* Search mic icon doesn't need flip usually */
+        [dir="rtl"] .material-symbols-outlined:contains('mic') {
+            transform: none;
+        }
+    </style>
+</body></html>

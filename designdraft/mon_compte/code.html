@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fcf9f8",
+                        "primary-fixed-dim": "#82d7ba",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-tertiary-fixed": "#231b00",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1b1b1b",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-secondary-container": "#650001",
+                        "inverse-primary": "#82d7ba",
+                        "inverse-on-surface": "#f3f0ef",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#016b54",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#fc6451",
+                        "tertiary-fixed-dim": "#ecc22c",
+                        "surface": "#fcf9f8",
+                        "surface-container-low": "#f6f3f2",
+                        "tertiary-fixed": "#ffe085",
+                        "secondary-fixed": "#ffdad5",
+                        "inverse-surface": "#313030",
+                        "tertiary-container": "#cfa701",
+                        "on-surface": "#1b1b1b",
+                        "on-secondary-fixed-variant": "#8e130c",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#eae7e7",
+                        "secondary": "#b02d21",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#3e4944",
+                        "on-primary-fixed-variant": "#00513f",
+                        "tertiary": "#735c00",
+                        "on-primary-container": "#94e8cb",
+                        "secondary-fixed-dim": "#ffb4a9",
+                        "outline-variant": "#bec9c3",
+                        "primary-container": "#006b54",
+                        "primary-fixed": "#9ef3d6",
+                        "on-secondary-fixed": "#410000",
+                        "surface-container": "#f0eded",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#002118",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dcd9d9",
+                        "outline": "#6f7a74",
+                        "on-tertiary-container": "#4e3e00",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fcf9f8",
+                        "primary": "#00513f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "display": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24
+    }
+.grain-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 99;
+    opacity: 0.02;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBbuP9AcpnpR2R1TonrERNUMKvOtuVMkqcVyy0149cWjVrqtcaG8EE5nbfjiWtG48ZAs2WJ3F3NZndKSFvcu9kemnMXvAyENLvCPoaNo6mj5CBLtksoP4QjTPU7Vx9YavnyCJBX8Nls0fZNb2iKVsXvr0b4QzG6gA6hVE9xJTVraFFS5NznuLqAy9VFSGJWv23vj55MDHZ0aUS5tIdGh8BzomOh-4LG8UMiDw6rW9Ed_2Y-ZgQoXvlZHf0ZHephlQJ_kgqSF2V77U8I)
+    }
+body {
+    background-color: #fcf9f8;
+    max-width: 375px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative
+    }
+.zellige-badge {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body text-on-surface overflow-x-hidden selection:bg-primary/20">
+<div class="grain-overlay"></div>
+<!-- Top App Bar -->
+<header class="w-full top-0 sticky z-40 shadow-sm bg-surface flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary cursor-pointer active:opacity-70 transition-all">menu</span>
+<h1 class="font-headline text-2xl font-bold text-secondary">Heritage Excellence</h1>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary cursor-pointer active:opacity-70 transition-all">shopping_bag</span>
+</div>
+</header>
+<main class="pb-32">
+<!-- Profile Header Section -->
+<section class="px-6 pt-8 pb-10 bg-gradient-to-b from-surface to-surface-container-low">
+<div class="flex items-center gap-6">
+<div class="relative">
+<div class="w-24 h-24 rounded-full border-4 border-white shadow-lg overflow-hidden bg-surface-container-highest">
+<img alt="Marwan El Fassi" class="w-full h-full object-cover" data-alt="A sophisticated close-up portrait of a gentleman with a warm smile, set against a backdrop of traditional Moroccan architectural details. The lighting is soft and golden, highlighting the artisanal quality of the environment. The overall aesthetic is high-end and curated, reflecting a premium heritage lifestyle with deep green and terracotta accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqWI-Nn7WNIvtoAtw7WCF68Oowte5jZphJ_U-JclUckoXZDMg0ZEatrxZTniR4q1LlGyhGXJbv1B9905jSci7IcaxCZ-80LfW5mJdyBHdo1o5r0TUhmaAo0bMB1wHckrxQBsUYU8KSzuFvoNOa2Jlp0guGMi7D9g3HwiP-GVrqdKPEAjQG8el-UPFOj0P3thN_VJggIUG7BFi9ZEFdk8fP44O3QzOuo-tInGQflgAuXq3RcI4hzU1x-BisEKbmqn0bi1x1tbzykwF1"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-tertiary text-white w-8 h-8 rounded-full flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="font-headline text-2xl font-bold text-on-surface tracking-tight">Marwan El Fassi</h2>
+<div class="flex items-center gap-2">
+<span class="inline-block px-2 py-0.5 rounded-sm bg-primary-fixed-dim/20 text-primary font-label text-[10px] uppercase tracking-widest font-semibold">Connoisseur Member</span>
+</div>
+<p class="font-body text-xs text-on-surface-variant/70">Fez, Morocco</p>
+</div>
+</div>
+</section>
+<!-- Menu List Rows -->
+<section class="mt-2 bg-surface">
+<nav class="flex flex-col">
+<!-- Row: Mes favoris -->
+<a class="h-[56px] px-6 flex items-center justify-between hover:bg-surface-container-low transition-colors group active:scale-[0.98] transition-transform" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">favorite</span>
+<span class="font-body text-body-md text-on-surface">Mes favoris</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</a>
+<div class="mx-6 border-b border-outline-variant/10"></div>
+<!-- Row: Mes avis -->
+<a class="h-[56px] px-6 flex items-center justify-between hover:bg-surface-container-low transition-colors group active:scale-[0.98] transition-transform" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">rate_review</span>
+<span class="font-body text-body-md text-on-surface">Mes avis</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</a>
+<div class="mx-6 border-b border-outline-variant/10"></div>
+<!-- Row: Préférences -->
+<a class="h-[56px] px-6 flex items-center justify-between hover:bg-surface-container-low transition-colors group active:scale-[0.98] transition-transform" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">settings</span>
+<span class="font-body text-body-md text-on-surface">Préférences</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</a>
+<div class="mx-6 border-b border-outline-variant/10"></div>
+<!-- Row: Aide & contact WhatsApp -->
+<a class="h-[56px] px-6 flex items-center justify-between hover:bg-surface-container-low transition-colors group active:scale-[0.98] transition-transform" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">contact_support</span>
+<div class="flex flex-col">
+<span class="font-body text-body-md text-on-surface leading-tight">Aide &amp; contact WhatsApp</span>
+<span class="text-[10px] text-primary/70 uppercase tracking-tighter">Réponse en moins de 10 min</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</a>
+<div class="mx-6 border-b border-outline-variant/10"></div>
+<!-- Row: Déconnexion -->
+<a class="h-[56px] px-6 flex items-center justify-between hover:bg-surface-container-low transition-colors group active:scale-[0.98] transition-transform" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">logout</span>
+<span class="font-body text-body-md text-secondary font-medium">Déconnexion</span>
+</div>
+</a>
+</nav>
+</section>
+<!-- Demo Badge -->
+<section class="mt-12 px-6 flex flex-col items-center justify-center text-center gap-4">
+<div class="bg-surface-container-high px-4 py-2 rounded-full inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">info</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Compte démo — aucune authentification réelle</span>
+</div>
+<p class="font-headline text-[12px] italic text-outline-variant opacity-60">L'art de vivre à la marocaine depuis 1924</p>
+</section>
+</main>
+<!-- Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe shadow-[0px_-4px_12px_rgba(27,27,27,0.04)] bg-surface/80 backdrop-blur-xl rounded-t-full">
+<!-- Home -->
+<button class="flex flex-col items-center justify-center text-outline transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1">Home</span>
+</button>
+<!-- Explorer -->
+<button class="flex flex-col items-center justify-center text-outline transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1">Explorer</span>
+</button>
+<!-- Favorites -->
+<button class="flex flex-col items-center justify-center text-outline transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1">Favorites</span>
+</button>
+<!-- Account (Active) -->
+<button class="flex flex-col items-center justify-center text-primary transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label text-[10px] uppercase tracking-widest mt-1 font-bold">Account</span>
+</button>
+</nav>
+<script>
+        // Micro-interactions for list items
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('touchstart', () => {
+                link.classList.add('bg-surface-container-high');
+            });
+            link.addEventListener('touchend', () => {
+                setTimeout(() => {
+                    link.classList.remove('bg-surface-container-high');
+                }, 150);
+            });
+        });
+
+        // Simple haptic-like effect simulation
+        const navButtons = document.querySelectorAll('nav button');
+        navButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                navButtons.forEach(b => {
+                    b.classList.remove('text-primary');
+                    b.classList.add('text-outline');
+                    b.querySelector('span').style.fontVariationSettings = "'FILL' 0";
+                    b.querySelector('.font-label').classList.remove('font-bold');
+                });
+                btn.classList.add('text-primary');
+                btn.classList.remove('text-outline');
+                btn.querySelector('span').style.fontVariationSettings = "'FILL' 1";
+                btn.querySelector('.font-label').classList.add('font-bold');
+            });
+        });
+    </script>
+</body></html>

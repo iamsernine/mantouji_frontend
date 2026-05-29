@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heritage Excellence - Nos Coopératives</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Inter:wght@300;400;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#fcf9f8",
+                    "primary-fixed-dim": "#82d7ba",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "on-tertiary-fixed": "#231b00",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1b1b",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-secondary-container": "#650001",
+                    "inverse-primary": "#82d7ba",
+                    "inverse-on-surface": "#f3f0ef",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#016b54",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#fc6451",
+                    "tertiary-fixed-dim": "#ecc22c",
+                    "surface": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "tertiary-fixed": "#ffe085",
+                    "secondary-fixed": "#ffdad5",
+                    "inverse-surface": "#313030",
+                    "tertiary-container": "#cfa701",
+                    "on-surface": "#1b1b1b",
+                    "on-secondary-fixed-variant": "#8e130c",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "secondary": "#b02d21",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#3e4944",
+                    "on-primary-fixed-variant": "#00513f",
+                    "tertiary": "#735c00",
+                    "on-primary-container": "#94e8cb",
+                    "secondary-fixed-dim": "#ffb4a9",
+                    "outline-variant": "#bec9c3",
+                    "primary-container": "#006b54",
+                    "primary-fixed": "#9ef3d6",
+                    "on-secondary-fixed": "#410000",
+                    "surface-container": "#f0eded",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#002118",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dcd9d9",
+                    "outline": "#6f7a74",
+                    "on-tertiary-container": "#4e3e00",
+                    "surface-variant": "#e5e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fcf9f8",
+                    "primary": "#00513f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif", "serif"],
+                    "display": ["Noto Serif", "serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"],
+                    "amiri": ["Amiri", "serif"]
+            },
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.paper-texture {
+    position: relative
+    }
+.paper-texture::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.02;
+    pointer-events: none;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuChzfxZUxG6i6ESded6awIhtCewidF2pkDWUsOQCeSRrWv3JnkzaNZSQruZw5UUX53WLOMIbTasJzpi03UWb0inABZrCIpozXCj1DSfgIBjgi_dNQts-FkhJvtQf6-IBGKq6Wuij5MwI76T4PYDrGS2S5WBVF-JSNNyrJBJp6StgRK7LZRxk93mXPbXGyq4REBC0IeCiYICJj-7cnB-mCFvL_6km6Z3xmmOJ1oxvugpcIto-YasoGVoqclgvH9__LnXZDQESbEKDLJ2);
+    z-index: 10
+    }
+.zellige-badge {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transform: rotate(-2deg)
+    }
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body paper-texture min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface shadow-sm w-full top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim cursor-pointer active:opacity-70 transition-all">menu</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-headline text-2xl font-bold text-secondary dark:text-secondary-fixed-dim">MANTOUJI</span>
+<span class="text-[8px] uppercase tracking-[0.2em] font-label text-primary">Heritage Excellence</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-2 bg-surface-container rounded-full px-3 py-1">
+<span class="text-xs font-bold text-primary">FR</span>
+<span class="text-xs text-outline">|</span>
+<span class="text-xs font-amiri text-outline">عربي</span>
+</div>
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim cursor-pointer active:opacity-70 transition-all">shopping_bag</span>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-xl mx-auto px-6 pt-12 pb-32">
+<!-- Hero Section -->
+<section class="text-center mb-12">
+<h1 class="font-headline text-[2.5rem] leading-tight text-on-background mb-4">Nos Coopératives</h1>
+<div class="w-12 h-[2px] bg-tertiary-container mx-auto mb-6"></div>
+<p class="font-body text-body-md text-on-surface-variant leading-relaxed px-4">
+                Découvrez les artisans passionnés qui façonnent le terroir marocain. Chaque coopérative raconte une histoire unique, celle de femmes et d'hommes engagés pour une production authentique et durable.
+            </p>
+</section>
+<!-- Cooperatives List (Editorial Cards) -->
+<div class="space-y-8">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_12px_32px_rgba(27,27,27,0.06)] group transition-transform active:scale-[0.98]">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A group of Moroccan women in traditional brightly colored hijabs sitting together in a lush palm grove under warm sunlight, sorting and processing a large pile of freshly harvested dates on the ground. The scene is authentic and artisanal, with soft warm lighting highlighting the rich textures of the dates and the surrounding greenery. The overall aesthetic is earthy and premium, reflecting Moroccan heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzgqTVt_WSx1uzs8i_C1-Cw2hPIfiQjIwb3gW_cPFvSlQEbnINMwmOyKC40s2P-lA13H3XYwaJBEY69gJQBdEQkweSxHqT7fimnyTj8YKpjkbNf4FXKMkMdUDCsShPEtj2aUCjBZsnGX_k0lvpQlCKG3ir2H_ez2pdw2cfBeQ6853azxz4sVKPJxMwv5jP_A00IVr2dc8iaVwwz3wd4Iigg_1ihYxsxo08SWEQdv-WTvFw1Sat0vmhtCCgy1hbW922jK94B-Es7BLp"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-primary/90 text-on-primary text-[10px] font-label px-2 py-1 rounded-sm flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            ONSSA CERTIFIÉ
+                        </span>
+<span class="bg-secondary/90 text-on-primary text-[10px] font-label px-2 py-1 rounded-sm flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+                            BIO MAROC
+                        </span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-1 text-primary text-[11px] font-label mb-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        DRÂA-TAFILALET
+                    </div>
+<h2 class="font-headline text-xl text-on-surface mb-3">Coopérative Aziza de Figuig</h2>
+<p class="text-on-surface-variant text-sm leading-snug mb-4">
+                        Spécialisée dans la production de dattes de qualité supérieure et de produits dérivés du désert.
+                    </p>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant/10">
+<span class="text-xs text-outline italic">Depuis 1994</span>
+<button class="text-primary font-bold text-sm flex items-center gap-2 group/btn">
+                            Voir le profil
+                            <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_12px_32px_rgba(27,27,27,0.06)] group transition-transform active:scale-[0.98]">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of artisanal hands carefully crushing argan nuts with traditional stone tools inside a rustic earthen workshop in Morocco. Warm, atmospheric light streams through a window, illuminating the dust particles and the rich golden textures of the oil. The setting is intimate and historical, focusing on the laborious process of traditional argan oil extraction. Premium editorial photography style with deep shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmSpN-TasJsb215wmr2SY1tW2A9X5t0XVIM4fDH6vknxREvqwds8piW8q7OTzY-wz9TFGSRzfkIf1lmMNtiudvVp3UOyb-MNWPZ1qd3YdGrigcs80Je3l2dUvX_KU-BZHG3LxNjPORbbsqrdWerOgnBLGeLBJlVxw84Td1VkMCAlBqNAS183N05x4kZLhDTEZ6WDx8KcsMCnc_wjJeWDPaTTeTT-12d7Bz8TAa5Tti1sOrBmMf2dBnWtc5An0DX-IOOc_1MDe6_EEG"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-primary/90 text-on-primary text-[10px] font-label px-2 py-1 rounded-sm flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            ONSSA CERTIFIÉ
+                        </span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-1 text-primary text-[11px] font-label mb-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        SOUSS-MASSA
+                    </div>
+<h2 class="font-headline text-xl text-on-surface mb-3">Coopérative Tighanimine</h2>
+<p class="text-on-surface-variant text-sm leading-snug mb-4">
+                        Pionnière dans l'huile d'argan biologique et les cosmétiques naturels certifiés équitables.
+                    </p>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant/10">
+<span class="text-xs text-outline italic">Patrimoine Mondial</span>
+<button class="text-primary font-bold text-sm flex items-center gap-2 group/btn">
+                            Voir le profil
+                            <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_12px_32px_rgba(27,27,27,0.06)] group transition-transform active:scale-[0.98]">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Wide shot of several brightly painted wooden beehives stacked in a row on a sunny hillside in the Atlas Mountains of Morocco. The background shows sprawling valleys and distant rugged peaks under a clear blue sky. The lighting is crisp and natural, highlighting the rustic charm of traditional beekeeping. The colors are vibrant and organic, reflecting a pure mountain terroir and artisan honey production." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy6o6d0vF-X_CP3N9j4pGTdFJI751oTt8FALWK6OiTBfanDk0GFYkqALThEmxeXR5tMQCJGckpCpRhVBm2jvKlEHPnCqjO_u2pXqu0hQDc8pfuh9NBSmJl9AAAHhz51m6ESRiDpgQJS6JjzHupODro6-1JNj_pPMhfRGe26x5uT9th7VkrRK8zJf_I6Ja4cAe1ad_rrfjLhiyR3syP8fwCtXvpCXyqFR92s5Da4pSMKxijzO8vzOjGiv0mihc2WWxr0sCbeR4GYOSo"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-primary/90 text-on-primary text-[10px] font-label px-2 py-1 rounded-sm flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            ONSSA CERTIFIÉ
+                        </span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-1 text-primary text-[11px] font-label mb-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        FÈS-MEKNÈS
+                    </div>
+<h2 class="font-headline text-xl text-on-surface mb-3">Coopérative Mellah</h2>
+<p class="text-on-surface-variant text-sm leading-snug mb-4">
+                        Miel de montagne pur et produits de la ruche récoltés dans le respect de la biodiversité.
+                    </p>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant/10">
+<span class="text-xs text-outline italic">Artisans Butineurs</span>
+<button class="text-primary font-bold text-sm flex items-center gap-2 group/btn">
+                            Voir le profil
+                            <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination/Load More subtle -->
+<div class="mt-16 text-center">
+<button class="bg-surface-container-high text-primary font-label text-xs tracking-widest px-8 py-3 rounded-full hover:bg-primary hover:text-on-primary transition-all duration-300">
+                DÉCOUVRIR PLUS
+            </button>
+</div>
+</main>
+<!-- FAB WhatsApp (Only on main screens) -->
+<a class="fixed bottom-24 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-transform duration-200 z-50" href="#">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24">
+<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793 0-.853.448-1.271.607-1.445.16-.173.348-.217.464-.217l.333.006c.101.005.232-.038.363.275.13.314.449 1.09.49 1.177.041.087.068.188.01.304-.058.116-.087.188-.173.289-.087.101-.183.226-.261.304-.087.087-.178.183-.077.358.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.435-.506.55-.68.116-.174.232-.145.391-.087.16.058 1.014.478 1.187.565.173.088.289.13.333.203.043.073.043.419-.101.824z"></path>
+</svg>
+</a>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface/80 dark:bg-surface/80 backdrop-blur-xl shadow-[0px_-4px_12px_rgba(27,27,27,0.04)] rounded-t-full">
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label text-[10px] uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold">Explorer</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1">favorite</span>
+<span class="font-label text-[10px] uppercase tracking-widest">Favorites</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label text-[10px] uppercase tracking-widest">Account</span>
+</a>
+</nav>
+<!-- Navigation Drawer (Hidden initially) -->
+<div class="fixed inset-0 bg-black/40 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300" id="drawer">
+<aside class="h-full w-80 bg-surface dark:bg-surface-dim shadow-2xl flex flex-col py-8 -translate-x-full transition-transform duration-300 ease-in-out">
+<div class="px-8 mb-8 flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">Marwan El Fassi</h3>
+<p class="text-xs text-outline">Connoisseur Member</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-4 px-8 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="font-body text-body-md">Our Story</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-body text-body-md">Terroir Map</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-3 bg-primary-container text-on-primary-container rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="font-body text-body-md">Artisans</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined">verified</span>
+<span class="font-body text-body-md">Authenticity</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-3 text-on-surface-variant hover:bg-surface-variant rounded-full mx-2 transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-body text-body-md">Contact</span>
+</a>
+</nav>
+<footer class="px-8 mt-auto pt-8 border-t border-outline-variant/20">
+<p class="text-[10px] text-outline uppercase tracking-widest">© 2024 MANTOUJI</p>
+</footer>
+</aside>
+</div>
+<script>
+        const menuBtn = document.querySelector('header span.material-symbols-outlined:first-child');
+        const drawer = document.getElementById('drawer');
+        const drawerContent = drawer.querySelector('aside');
+
+        menuBtn.addEventListener('click', () => {
+            drawer.classList.remove('hidden');
+            setTimeout(() => {
+                drawer.classList.replace('opacity-0', 'opacity-100');
+                drawerContent.classList.replace('-translate-x-full', 'translate-x-0');
+            }, 10);
+        });
+
+        drawer.addEventListener('click', (e) => {
+            if (e.target === drawer) {
+                drawerContent.classList.replace('translate-x-0', '-translate-x-full');
+                drawer.classList.replace('opacity-100', 'opacity-0');
+                setTimeout(() => drawer.classList.add('hidden'), 300);
+            }
+        });
+    </script>
+</body></html>

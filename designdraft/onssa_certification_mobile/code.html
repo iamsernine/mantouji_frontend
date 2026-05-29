@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#002118",
+              "error-container": "#ffdad6",
+              "tertiary-container": "#cfa701",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f3f0ef",
+              "secondary-container": "#fc6451",
+              "on-surface": "#1b1b1b",
+              "tertiary-fixed-dim": "#ecc22c",
+              "secondary-fixed-dim": "#ffb4a9",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              "outline-variant": "#bec9c3",
+              "on-secondary": "#ffffff",
+              "secondary": "#b02d21",
+              "on-tertiary-fixed": "#231b00",
+              "primary": "#00513f",
+              "on-background": "#1b1b1b",
+              "on-secondary-fixed": "#410000",
+              "on-error-container": "#93000a",
+              "surface-container": "#f0eded",
+              "outline": "#6f7a74",
+              "tertiary": "#735c00",
+              "primary-fixed-dim": "#82d7ba",
+              "surface-container-high": "#eae7e7",
+              "inverse-surface": "#313030",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#94e8cb",
+              "surface-container-highest": "#e5e2e1",
+              "surface": "#fcf9f8",
+              "on-surface-variant": "#3e4944",
+              "on-tertiary-container": "#4e3e00",
+              "primary-container": "#006b54",
+              "surface-container-low": "#f6f3f2",
+              "surface-tint": "#016b54",
+              "on-primary-fixed-variant": "#00513f",
+              "tertiary-fixed": "#ffe085",
+              "background": "#fcf9f8",
+              "on-tertiary-fixed-variant": "#574500",
+              "on-secondary-container": "#650001",
+              "surface-dim": "#dcd9d9",
+              "secondary-fixed": "#ffdad5",
+              "error": "#ba1a1a",
+              "on-secondary-fixed-variant": "#8e130c",
+              "surface-bright": "#fcf9f8",
+              "primary-fixed": "#9ef3d6",
+              "inverse-primary": "#82d7ba",
+              "surface-variant": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "Amiri", "serif"],
+              "body": ["Inter", "Noto Sans Arabic", "sans-serif"],
+              "label": ["Inter", "Noto Sans Arabic", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .zellige-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0l5 15h15l-12 9 5 16-13-10-13 10 5-16-12-9h15z' fill='%2300513f' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body max-w-[390px] mx-auto min-h-screen pb-24 zellige-pattern">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-surface/80 backdrop-blur-md px-4 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<h1 class="font-headline text-lg font-bold text-primary leading-tight">Certification ONSSA</h1>
+<p class="text-[10px] uppercase tracking-wider text-outline font-label">Sécurité Sanitaire</p>
+</div>
+</div>
+<button class="w-10 h-10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">close</span>
+</button>
+</header>
+<main class="px-4 pt-4">
+<!-- Intro Banner -->
+<section class="bg-primary/5 rounded-xl p-4 mb-6 relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline text-xl text-primary font-bold">Agrément Sanitaire</h2>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                        Inspection dans 12 jours
+                    </span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                    Votre dossier est en cours de traitement par les services régionaux. Assurez-vous que tous les documents techniques sont valides.
+                </p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-8xl text-primary">potted_plant</span>
+</div>
+</section>
+<!-- Vertical Stepper -->
+<div class="space-y-0 relative">
+<!-- Connector Line -->
+<div class="absolute top-4 bottom-4 right-[19px] w-[2px] bg-surface-container-highest"></div>
+<!-- Step 1: Completed -->
+<div class="relative flex gap-4 pb-8">
+<div class="relative z-10 w-10 h-10 rounded-full bg-primary flex items-center justify-center ring-4 ring-background">
+<span class="material-symbols-outlined text-white text-xl">check</span>
+</div>
+<div class="pt-1 flex-1">
+<h3 class="font-bold text-primary text-sm">Inscription initiale</h3>
+<p class="text-xs text-outline">Complété le 12 Mars 2024</p>
+</div>
+</div>
+<!-- Step 2: Completed -->
+<div class="relative flex gap-4 pb-8">
+<div class="relative z-10 w-10 h-10 rounded-full bg-primary flex items-center justify-center ring-4 ring-background">
+<span class="material-symbols-outlined text-white text-xl">check</span>
+</div>
+<div class="pt-1 flex-1">
+<h3 class="font-bold text-primary text-sm">Paiement des redevances</h3>
+<p class="text-xs text-outline">Confirmé par le trésor</p>
+</div>
+</div>
+<!-- Step 3: In Progress (Expanded) -->
+<div class="relative flex gap-4 pb-8">
+<div class="relative z-10 w-10 h-10 rounded-full bg-tertiary flex items-center justify-center ring-4 ring-background">
+<span class="material-symbols-outlined text-white text-xl animate-pulse">pending</span>
+</div>
+<div class="pt-1 flex-1">
+<h3 class="font-bold text-tertiary text-sm">Dossier Technique</h3>
+<p class="text-xs text-outline-variant mb-4">60% complété</p>
+<!-- Checklist Card -->
+<div class="bg-surface-container-lowest border border-tertiary/20 rounded-xl p-4 shadow-sm mb-4">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm text-on-surface">Plan de situation local</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm text-on-surface">Analyses physico-chimiques</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-lg">radio_button_unchecked</span>
+<span class="text-sm font-medium text-on-surface">Formulaire de demande d'agrément</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-lg">radio_button_unchecked</span>
+<span class="text-sm font-medium text-on-surface">Photos des installations (3 vues)</span>
+</div>
+</div>
+<button class="w-full mt-6 py-3 border-2 border-tertiary border-dashed rounded-lg text-tertiary font-bold text-sm flex items-center justify-center gap-2 hover:bg-tertiary/5 transition-colors">
+<span class="material-symbols-outlined">upload_file</span>
+                            Joindre un document PDF
+                        </button>
+</div>
+<!-- Tip Box -->
+<div class="bg-tertiary/10 border-r-4 border-tertiary p-3 rounded-l-lg">
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">lightbulb</span>
+<p class="text-xs text-on-tertiary-container leading-relaxed">
+                                Conseil : Veillez à ce que les photos soient lumineuses et montrent clairement les zones de stockage séparées.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 4: Locked -->
+<div class="relative flex gap-4 pb-8">
+<div class="relative z-10 w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center ring-4 ring-background">
+<span class="material-symbols-outlined text-outline text-xl">lock</span>
+</div>
+<div class="pt-1 flex-1">
+<h3 class="font-bold text-outline text-sm">Visite d'inspection</h3>
+<p class="text-[10px] text-outline-variant italic">Débloqué après validation du dossier</p>
+</div>
+</div>
+<!-- Step 5: Locked -->
+<div class="relative flex gap-4">
+<div class="relative z-10 w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center ring-4 ring-background">
+<span class="material-symbols-outlined text-outline text-xl">verified</span>
+</div>
+<div class="pt-1 flex-1">
+<h3 class="font-bold text-outline text-sm">Émission du Certificat</h3>
+<p class="text-[10px] text-outline-variant italic">Étape finale</p>
+</div>
+</div>
+</div>
+<!-- Cooperative Footer Preview -->
+<div class="mt-8 mb-6 p-4 bg-surface-container-low rounded-xl flex items-center justify-between border border-outline-variant/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Cooperative logo showing olive branch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgrJusdF--sgqGcYFvh2rwUTJ1mu7ALhCmp79aSQj1xNIP6dkpeZU96I1NBPKjZaVMa_N5-_4Q8IMYNykqsCMGoERnA61lFwegZImfZLQr1AJsbMWLiRNFDH4zDOsQ31-yyAtP4i9mm02RltqGK9Dz2GxN-5g2h6sh4YbFJYbhS86TKpHovdOah8GOf2FBDhp2x3N83iaRwm-wU8ko8kNspSSrb83JqR8YWAXnzhaVgTU1YDxMqNWacNBtR2lXUglUSursBXgAkMDL"/>
+</div>
+<div>
+<h4 class="text-sm font-bold text-primary">Coopérative Beldi</h4>
+<p class="text-[10px] text-outline">Producteur Certifié</p>
+</div>
+</div>
+<button class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Mock (Contextual) -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-[390px] mx-auto bg-surface-container-low px-6 py-3 flex justify-between items-center shadow-[0_-4px_16px_rgba(0,0,0,0.05)] border-t border-outline-variant/20">
+<div class="flex flex-col items-center gap-1 text-outline">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-medium">Tableau</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-outline">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="text-[10px] font-medium">Produits</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] font-bold">Certification</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-outline">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Paramètres</span>
+</div>
+</nav>
+</body></html>

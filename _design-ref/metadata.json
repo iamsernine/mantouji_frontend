@@ -1,0 +1,6 @@
+{
+  "name": "Mantouji Showcase",
+  "description": "Immersive, cinematic landing page showcasing authentic Moroccan terroir products and cooperatives.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
