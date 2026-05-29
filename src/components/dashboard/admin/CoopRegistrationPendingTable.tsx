@@ -12,6 +12,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { adminListPendingCoopRequests } from "@/lib/api";
+import type { CoopRegistrationRequest } from "@/types/coop-registration";
 
 type PendingReq = {
   id: string;
@@ -30,10 +31,10 @@ export function CoopRegistrationPendingTable() {
     try {
       const res = await adminListPendingCoopRequests();
       setItems(
-        (res.data ?? []).map((r: any) => ({
+        (res.data ?? []).map((r: CoopRegistrationRequest) => ({
           id: String(r.id),
-          nomCooperative: r.nomCooperative ?? r.nom_cooperative ?? "",
-          contactEmail: r.contactEmail ?? r.contact_email ?? "",
+          nomCooperative: r.nomCooperative,
+          contactEmail: r.contactEmail,
         }))
       );
     } finally {

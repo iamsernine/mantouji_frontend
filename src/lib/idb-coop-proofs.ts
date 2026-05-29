@@ -58,7 +58,7 @@ export async function putProofBlob(
     mimeType: file.type || "application/octet-stream",
     sizeBytes: file.size,
   };
-  await withStore("readwrite", (s) => s.put(value as any, storageKey));
+  await withStore("readwrite", (s) => s.put(value, storageKey));
 }
 
 export async function getProofBlob(storageKey: string): Promise<StoredProof | null> {

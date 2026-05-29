@@ -12,6 +12,8 @@ import {
   type Paginated,
 } from "@/lib/mappers";
 import type { Cooperative } from "@/types/cooperative";
+import type { CoopRegistrationRequest } from "@/types/coop-registration";
+import type { CoopNotification } from "@/types/onssa";
 import type { Categorie, Certification, Produit, Region } from "@/types/product";
 
 function success<T>(data: T, message = "Operation successful"): ApiSuccess<T> {
@@ -160,11 +162,17 @@ export async function uploadCoopRegistrationDocument(params: {
 }
 
 export async function adminListPendingCoopRequests() {
-  return apiRequest<any[]>("/coop-registrations/admin/pending", { auth: true, cache: "no-store" });
+  return apiRequest<CoopRegistrationRequest[]>("/coop-registrations/admin/pending", {
+    auth: true,
+    cache: "no-store",
+  });
 }
 
 export async function adminGetCoopRequest(id: string) {
-  return apiRequest<any>(`/coop-registrations/admin/${id}`, { auth: true, cache: "no-store" });
+  return apiRequest<CoopRegistrationRequest>(`/coop-registrations/admin/${id}`, {
+    auth: true,
+    cache: "no-store",
+  });
 }
 
 export async function adminApproveCoopRequest(id: string) {
@@ -183,7 +191,10 @@ export async function adminRejectCoopRequest(id: string, message: string) {
 }
 
 export async function getMyCoopNotifications() {
-  return apiRequest<any[]>("/coop-registrations/me/notifications", { auth: true, cache: "no-store" });
+  return apiRequest<CoopNotification[]>("/coop-registrations/me/notifications", {
+    auth: true,
+    cache: "no-store",
+  });
 }
 
 async function uploadCooperativeImage(
@@ -333,11 +344,11 @@ export async function deleteMyReview(reviewId: string) {
   return apiRequest(`/avis/${reviewId}`, { method: "DELETE", auth: true });
 }
 
-export function getCooperative(id: string): Cooperative | undefined {
+export function getCooperative(_id: string): Cooperative | undefined {
   return undefined;
 }
 
-export function getProduct(id: string): Produit | undefined {
+export function getProduct(_id: string): Produit | undefined {
   return undefined;
 }
 

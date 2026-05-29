@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { createElement, useEffect, useMemo, useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { getFiliereIcon } from "@/data/onssa-filiere-icons";
 import { SpreadsheetEditor } from "@/components/dashboard/SpreadsheetEditor";
@@ -42,8 +42,6 @@ export function FiliereAdminPanel({ filiere, onBack, onUpdated }: Props) {
     return <p className="py-8 text-center text-charcoal/50">Chargement…</p>;
   }
 
-  const Icon = getFiliereIcon(filiere.id);
-
   const saveFiliereMeta = () => {
     updateFiliereRowInSheet(filiere.rowIndex, { enBaseNationale: enBase });
     onUpdated();
@@ -65,7 +63,9 @@ export function FiliereAdminPanel({ filiere, onBack, onUpdated }: Props) {
           </Button>
           <div className="flex items-start gap-3">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center border border-charcoal/15">
-              <Icon className="h-6 w-6 stroke-[1.25] text-charcoal/70" />
+              {createElement(getFiliereIcon(filiere.id), {
+                className: "h-6 w-6 stroke-[1.25] text-charcoal/70",
+              })}
             </div>
             <div>
               <h2 className="font-serif text-xl text-burgundy">{filiere.nom}</h2>

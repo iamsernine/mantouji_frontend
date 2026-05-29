@@ -4,18 +4,16 @@ import { useCallback, useEffect, useState } from "react";
 import { Bell, CheckCheck } from "lucide-react";
 import { DashboardSection } from "@/components/dashboard/DashboardSection";
 import { Button } from "@/components/ui/button";
-import { useCoopDashboard } from "@/contexts/coop-dashboard-context";
 import { getMyCoopNotifications } from "@/lib/api";
 import type { CoopNotification } from "@/types/onssa";
 
 export function CoopNotificationsPanel() {
-  const { coopId } = useCoopDashboard();
   const [notifications, setNotifications] = useState<CoopNotification[]>([]);
   const [ready, setReady] = useState(false);
 
   const refresh = useCallback(() => {
     getMyCoopNotifications()
-      .then((res) => setNotifications(res.data as any))
+      .then((res) => setNotifications(res.data ?? []))
       .finally(() => setReady(true));
   }, []);
 

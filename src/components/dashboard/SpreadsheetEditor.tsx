@@ -4,7 +4,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {
   Columns,
   Download,
-  Plus,
   Rows,
   Save,
   Trash2,

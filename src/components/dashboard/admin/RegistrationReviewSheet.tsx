@@ -20,6 +20,12 @@ import {
   getRegions,
 } from "@/lib/api";
 import { ApiRequestError } from "@/lib/api-client";
+import type { CoopRegistrationRequest } from "@/types/coop-registration";
+import type { ProofDocumentPreview } from "@/components/dashboard/admin/ProofDocumentsList";
+
+type AdminCoopRegistrationDetail = CoopRegistrationRequest & {
+  documents?: ProofDocumentPreview[];
+};
 
 export function RegistrationReviewSheet({
   requestId,
@@ -37,7 +43,7 @@ export function RegistrationReviewSheet({
   const [regionNames, setRegionNames] = useState<Record<string, string>>({});
   const [actionError, setActionError] = useState<string | null>(null);
   const [busy, setBusy] = useState<"approve" | "reject" | null>(null);
-  const [request, setRequest] = useState<any | null>(null);
+  const [request, setRequest] = useState<AdminCoopRegistrationDetail | null>(null);
 
   useEffect(() => {
     getRegions()
@@ -166,10 +172,9 @@ export function RegistrationReviewSheet({
             description="Vérifiez l'authenticité avant validation."
           >
             <ProofDocumentsList
-              documents={(request.documents ?? []).map((d: any) => ({
+              documents={(request.documents ?? []).map((d) => ({
                 id: String(d.id),
-                kind: d.kind,
-                label: d.kind,
+                label: d.label ?? "Document",
                 fileName: d.fileName,
                 mimeType: d.mimeType,
                 sizeBytes: d.sizeBytes,

@@ -1,7 +1,6 @@
 import { getOnssaFiliere } from "@/data/onssa-filieres";
 import {
   getCoopAccreditedFilieresFromSheet,
-  getFilieresFromSheet,
   getOnssaFiliereFromDb,
   isFiliereInOnssaDatabase,
 } from "@/lib/onssa-db-storage";
