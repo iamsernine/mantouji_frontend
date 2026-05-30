@@ -1,8 +1,11 @@
+import type { PreferredLanguage } from "@/lib/locale-preference";
+
 const ACCESS_KEY = "mantouji_access_token";
 const REFRESH_KEY = "mantouji_refresh_token";
 const USER_KEY = "mantouji_auth_user";
 
-import type { PreferredLanguage } from "@/lib/locale-preference";
+/** Align cookie lifetime with refresh token (30 days). */
+export const AUTH_COOKIE_MAX_AGE_SECONDS = 30 * 24 * 60 * 60;
 
 export type StoredAuthUser = {
   id: string;
@@ -44,7 +47,7 @@ export function getStoredUser(): StoredAuthUser | null {
 function setAuthCookie(active: boolean) {
   if (!canUseStorage()) return;
   if (active) {
-    document.cookie = "mantouji_auth=1; path=/; max-age=2592000; SameSite=Lax";
+    document.cookie = `mantouji_auth=1; path=/; max-age=${AUTH_COOKIE_MAX_AGE_SECONDS}; SameSite=Lax`;
   } else {
     document.cookie = "mantouji_auth=; path=/; max-age=0; SameSite=Lax";
   }

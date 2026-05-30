@@ -1,4 +1,5 @@
 import type { ApiError, ApiResponse, ApiSuccess } from "@/types/api";
+import { ensureValidAccessToken, forceRefreshAccessToken, handleSessionExpired } from "@/lib/auth-session";
 import { getAccessToken } from "@/lib/auth-storage";
 
 function getApiBase() {
@@ -30,36 +31,11 @@ type RequestOptions = {
   auth?: boolean;
   cache?: RequestCache;
   next?: NextFetchRequestConfig;
+  /** Internal: skip refresh retry (prevents infinite loops). */
+  _retried?: boolean;
 };
 
-export async function apiRequest<T>(
-  path: string,
-  options: RequestOptions = {}
-): Promise<ApiSuccess<T>> {
-  const { method = "GET", body, auth = false, cache, next } = options;
-  const headers: Record<string, string> = {
-    Accept: "application/json",
-  };
-  if (body !== undefined) {
-    headers["Content-Type"] = "application/json";
-  }
-  if (auth) {
-    const token = getAccessToken();
-    if (!token) {
-      throw new ApiRequestError("Session expirée. Veuillez vous reconnecter.", 401);
-    }
-    headers.Authorization = `Bearer ${token}`;
-  }
-
-  const res = await fetch(`${getApiBase()}${path}`, {
-    method,
-    headers,
-    body: body !== undefined ? JSON.stringify(body) : undefined,
-    cache,
-    next,
-  });
-
-  const raw = await res.text();
+async function parseApiResponse<T>(res: Response, raw: string): Promise<ApiSuccess<T>> {
   if (!raw) {
     if (!res.ok) {
       throw new ApiRequestError("Request failed", res.status);
@@ -87,6 +63,54 @@ export async function apiRequest<T>(
     );
   }
   return json as ApiSuccess<T>;
+}
+
+export async function apiRequest<T>(
+  path: string,
+  options: RequestOptions = {}
+): Promise<ApiSuccess<T>> {
+  const { method = "GET", body, auth = false, cache, next, _retried = false } = options;
+  const headers: Record<string, string> = {
+    Accept: "application/json",
+  };
+  if (body !== undefined) {
+    headers["Content-Type"] = "application/json";
+  }
+
+  if (auth) {
+    const valid = await ensureValidAccessToken();
+    if (!valid) {
+      handleSessionExpired();
+      throw new ApiRequestError("Session expirée. Veuillez vous reconnecter.", 401);
+    }
+    const token = getAccessToken();
+    if (!token) {
+      handleSessionExpired();
+      throw new ApiRequestError("Session expirée. Veuillez vous reconnecter.", 401);
+    }
+    headers.Authorization = `Bearer ${token}`;
+  }
+
+  const res = await fetch(`${getApiBase()}${path}`, {
+    method,
+    headers,
+    body: body !== undefined ? JSON.stringify(body) : undefined,
+    cache,
+    next,
+  });
+
+  const raw = await res.text();
+
+  if (auth && res.status === 401 && !_retried) {
+    const refreshed = await forceRefreshAccessToken();
+    if (refreshed) {
+      return apiRequest<T>(path, { ...options, _retried: true });
+    }
+    handleSessionExpired();
+    throw new ApiRequestError("Session expirée. Veuillez vous reconnecter.", 401);
+  }
+
+  return parseApiResponse<T>(res, raw);
 }
 
 export function getApiBaseUrl() {

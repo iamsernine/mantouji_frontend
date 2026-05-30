@@ -22,6 +22,8 @@ export const MOROCCO_PROJECTION_CONFIG = {
   scale: 2350,
 };
 
+export const MAP_FILL_DEFAULT = "#e6dfd1";
+
 const REGION_ACCENTS: Partial<Record<MoroccoMapCode, string>> = {
   MA02: "#50652a",
   MA03: "#5d2a26",
@@ -29,6 +31,13 @@ const REGION_ACCENTS: Partial<Record<MoroccoMapCode, string>> = {
   MA08: "#cfaa71",
   MA09: "#3d4f20",
 };
+
+/** Same fill as each region on the interactive map view. */
+export function getRegionMapFill(mapCode: MoroccoMapCode): string {
+  const accent = REGION_ACCENTS[mapCode];
+  if (!accent) return MAP_FILL_DEFAULT;
+  return `color-mix(in srgb, ${accent} 12%, ${MAP_FILL_DEFAULT})`;
+}
 
 function regionNamesMatch(adminNom: string, regionNom: string): boolean {
   if (!regionNom.trim()) return false;

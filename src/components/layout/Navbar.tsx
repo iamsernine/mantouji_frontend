@@ -6,34 +6,46 @@ import { NavbarSearch } from "@/components/layout/NavbarSearch";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useState } from "react";
-import { AnimatedMobileMenu } from "@/components/layout/AnimatedMobileMenu";
+import { useEffect, useMemo, useState } from "react";
+import {
+  AnimatedMobileMenu,
+  type AnimatedMobileMenuLink,
+} from "@/components/layout/AnimatedMobileMenu";
 import { mobileMenuSmooth } from "@/lib/mobile-menu-motion";
 import { useAuth } from "@/contexts/auth-context";
 import { cn } from "@/lib/utils";
 
-const navLinks = [
-  { href: "/", label: "Accueil" },
-  {
-    href: "/produits",
-    label: "Explorer",
-    isActive: (p: string) =>
-      p.startsWith("/produits") ||
-      p.startsWith("/cooperatives") ||
-      p.startsWith("/regions"),
-  },
-  { href: "/cooperatives", label: "Coopératives" },
-  { href: "/regions", label: "Régions" },
-  { href: "/favoris", label: "Favoris" },
-];
+const explorerLink: AnimatedMobileMenuLink = {
+  href: "/produits",
+  label: "Explorer",
+  isActive: (pathname) =>
+    pathname.startsWith("/produits") ||
+    pathname.startsWith("/cooperatives") ||
+    pathname.startsWith("/regions"),
+};
+
+function buildMainNavLinks(isAuthenticated: boolean): AnimatedMobileMenuLink[] {
+  return [
+    { href: "/", label: "Accueil" },
+    explorerLink,
+    { href: "/cooperatives", label: "Coopératives" },
+    isAuthenticated
+      ? { href: "/favoris", label: "Favoris" }
+      : { href: "/regions", label: "Régions" },
+  ];
+}
 
 export function Navbar() {
   const { user } = useAuth();
   const pathname = usePathname();
-  const links = [
-    ...navLinks,
-    { href: user ? "/compte" : "/login", label: user ? "Mon compte" : "Compte" },
-  ];
+  const mainLinks = useMemo(() => buildMainNavLinks(Boolean(user)), [user]);
+  const links = useMemo(
+    () => [
+      ...mainLinks,
+      { href: user ? "/compte" : "/login", label: user ? "Mon compte" : "Compte" },
+    ],
+    [mainLinks, user]
+  );
   const isHome = pathname === "/";
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -55,6 +67,8 @@ export function Navbar() {
     setMenuOpen(false);
     setSearchOpen(true);
   };
+
+  const desktopLinks = mainLinks.filter((link) => link.href !== "/cooperatives");
 
   return (
     <motion.header
@@ -87,28 +101,24 @@ export function Navbar() {
         </div>
 
         <nav className="flex shrink-0 items-center justify-end gap-6 lg:gap-8">
-          {links
-            .filter(
-              (l) => l.href !== "/cooperatives" && l.href !== "/regions"
-            )
-            .map((l) => {
-              const active = l.isActive
-                ? l.isActive(pathname)
-                : pathname === l.href ||
-                  (l.href !== "/" && pathname.startsWith(l.href));
-              return (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className={cn(
-                    "text-sm uppercase tracking-widest transition-colors",
-                    active ? "text-burgundy" : "text-charcoal/70 hover:text-burgundy"
-                  )}
-                >
-                  {l.label}
-                </Link>
-              );
-            })}
+          {[...desktopLinks, links[links.length - 1]].map((l) => {
+            const active = l.isActive
+              ? l.isActive(pathname)
+              : pathname === l.href ||
+                (l.href !== "/" && pathname.startsWith(l.href));
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={cn(
+                  "text-sm uppercase tracking-widest transition-colors",
+                  active ? "text-burgundy" : "text-charcoal/70 hover:text-burgundy"
+                )}
+              >
+                {l.label}
+              </Link>
+            );
+          })}
         </nav>
       </div>
 

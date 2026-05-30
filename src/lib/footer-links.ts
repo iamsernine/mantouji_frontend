@@ -24,7 +24,6 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { label: "Notre histoire", href: "/a-propos" },
       { label: "Recherche", href: "/recherche" },
-      { label: "Favoris", href: "/favoris" },
       { label: "Mon compte", href: "/compte" },
     ],
   },

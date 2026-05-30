@@ -2,12 +2,14 @@
 
 import { memo, useCallback, useEffect, useState } from "react";
 import { getCooperatives, getProducts } from "@/lib/api";
+import type { MoroccoMapCode } from "@/data/morocco-admin-regions";
 import { regionSlugFromName } from "@/data/morocco-admin-regions";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import type { GeoProjection } from "d3-geo";
 import {
   buildMoroccoRegionsData,
   getRegionFromGeoProperties,
+  getRegionMapFill,
 } from "@/data/moroccoRegions";
 import { useMoroccoGeoJson } from "@/hooks/useMoroccoGeoJson";
 import {
@@ -59,10 +61,8 @@ function pointerFromFocusEvent(
   };
 }
 
-function regionStyle(accent?: string) {
-  const fill = accent
-    ? `color-mix(in srgb, ${accent} 12%, ${MAP_FILL.default})`
-    : MAP_FILL.default;
+function regionStyle(mapCode: MoroccoMapCode | string) {
+  const fill = getRegionMapFill(mapCode as MoroccoMapCode);
 
   return {
     default: {
@@ -223,7 +223,7 @@ export const InteractiveMoroccoMap = memo(function InteractiveMoroccoMap({
                           onRegionSelect?.(regionSlug);
                         }
                       }}
-                      style={regionStyle(regionMeta?.color)}
+                      style={regionStyle(regionMeta?.mapCode ?? geoId)}
                       className="focus:outline-none focus-visible:stroke-sage focus-visible:stroke-[2px]"
                     />
                   );

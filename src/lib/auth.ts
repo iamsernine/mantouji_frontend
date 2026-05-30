@@ -5,6 +5,7 @@ import {
   saveAuthSession,
   type StoredAuthUser,
 } from "@/lib/auth-storage";
+import { ensureValidAccessToken } from "@/lib/auth-session";
 import { toRole } from "@/lib/mappers";
 import type { Role } from "@/types/api";
 
@@ -87,17 +88,14 @@ export async function resendVerificationEmail(email: string) {
 }
 
 export async function refreshSession() {
-  const refreshToken = getRefreshToken();
-  if (!refreshToken) throw new Error("No refresh token");
-  const res = await apiRequest<{ accessToken: string; refreshToken: string }>("/auth/refresh", {
-    method: "POST",
-    body: { refreshToken },
-  });
+  const ok = await ensureValidAccessToken();
+  if (!ok) throw new Error("No refresh token");
   const user = (await import("@/lib/auth-storage")).getStoredUser();
-  if (user) {
-    saveAuthSession(res.data.accessToken, res.data.refreshToken, user);
-  }
-  return res.data;
+  if (!user) throw new Error("No stored user");
+  return {
+    accessToken: (await import("@/lib/auth-storage")).getAccessToken()!,
+    refreshToken: getRefreshToken()!,
+  };
 }
 
 export function logout() {

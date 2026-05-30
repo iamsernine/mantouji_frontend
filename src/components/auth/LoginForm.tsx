@@ -59,6 +59,15 @@ export function LoginForm() {
           Connectez-vous avec votre compte Mantouji.
         </p>
 
+        {searchParams.get("session") === "expired" ? (
+          <div className="mt-6 rounded-xl border border-burgundy/20 bg-burgundy/5 p-4">
+            <p className="text-sm font-semibold text-burgundy">Session expirée</p>
+            <p className="mt-1 text-sm text-charcoal/70">
+              Reconnectez-vous pour continuer.
+            </p>
+          </div>
+        ) : null}
+
         {searchParams.get("registered") === "1" ? (
           <div className="mt-6 rounded-xl border border-gold/30 bg-gold/10 p-4">
             <p className="text-sm font-semibold text-charcoal">Confirmez votre email</p>

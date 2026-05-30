@@ -9,6 +9,7 @@ import {
   useState,
 } from "react";
 import { getStoredUser, type StoredAuthUser } from "@/lib/auth-storage";
+import { bootstrapAuthSession, subscribeSessionExpired } from "@/lib/auth-session";
 import { login as apiLogin, logout as apiLogout, roleFromStored } from "@/lib/auth";
 import type { Role } from "@/types/api";
 
@@ -32,9 +33,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
-    setUser(getStoredUser());
-    setReady(true);
+    let cancelled = false;
+
+    void (async () => {
+      const ok = await bootstrapAuthSession();
+      if (cancelled) return;
+      setUser(ok ? getStoredUser() : null);
+      setReady(true);
+    })();
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
+
+  useEffect(() => subscribeSessionExpired(() => setUser(null)), []);
 
   const login = useCallback(async (email: string, password: string) => {
     const data = await apiLogin(email, password);

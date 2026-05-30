@@ -1,4 +1,5 @@
 import { apiRequest, ApiRequestError, getApiBaseUrl } from "@/lib/api-client";
+import { ensureValidAccessToken, handleSessionExpired } from "@/lib/auth-session";
 import { getAccessToken } from "@/lib/auth-storage";
 import type { ApiSuccess } from "@/types/api";
 import {
@@ -15,6 +16,7 @@ import type { Cooperative } from "@/types/cooperative";
 import type { CoopRegistrationRequest } from "@/types/coop-registration";
 import type { CoopNotification } from "@/types/onssa";
 import type { Categorie, Certification, Produit, Region } from "@/types/product";
+import { findRegionByCatalogName, sortRegionsByCatalog } from "@/data/catalog-regions";
 
 function success<T>(data: T, message = "Operation successful"): ApiSuccess<T> {
   return { success: true, message, data };
@@ -50,7 +52,7 @@ export async function getRegions(): Promise<ApiSuccess<Region[]>> {
     "/regions",
     { next: { revalidate: 300 } }
   );
-  return success(res.data.map(mapRegion));
+  return success(sortRegionsByCatalog(res.data.map(mapRegion)));
 }
 
 export async function getCategories(): Promise<ApiSuccess<Categorie[]>> {
@@ -204,8 +206,16 @@ async function uploadCooperativeImage(
   const formData = new FormData();
   formData.append("file", file);
   const headers: Record<string, string> = { Accept: "application/json" };
+  const valid = await ensureValidAccessToken();
+  if (!valid) {
+    handleSessionExpired();
+    throw new ApiRequestError("Session expirée. Veuillez vous reconnecter.", 401);
+  }
   const token = getAccessToken();
-  if (!token) throw new ApiRequestError("Session expirée. Veuillez vous reconnecter.", 401);
+  if (!token) {
+    handleSessionExpired();
+    throw new ApiRequestError("Session expirée. Veuillez vous reconnecter.", 401);
+  }
   headers.Authorization = `Bearer ${token}`;
 
   const res = await fetch(`${getApiBaseUrl()}${path}`, {
@@ -377,12 +387,7 @@ export async function getCooperativesByRegionSlug(slug: string): Promise<Coopera
   const admin = getAdminRegionBySlug(slug);
   if (!admin) return [];
   const { data: regions } = await getRegions();
-  const needle = admin.nom.toLowerCase().split(/[\s-]/)[0] ?? "";
-  const match = regions.find(
-    (r) =>
-      r.nom.toLowerCase().includes(needle) ||
-      needle.includes(r.nom.toLowerCase().split("-")[0] ?? "")
-  );
+  const match = findRegionByCatalogName(regions, admin.nom);
   if (!match) return getCooperatives({ isApproved: true }).then((r) => r.data);
   return getCooperativesByRegion(match.id);
 }

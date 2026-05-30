@@ -1,11 +1,12 @@
-import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-
-const PROTECTED_PREFIXES = ["/dashboard/admin", "/dashboard/cooperative"];
+import { NextResponse } from "next/server";
+import { PROTECTED_ROUTE_PREFIXES } from "@/lib/routes";
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const isProtected = PROTECTED_PREFIXES.some((p) => pathname.startsWith(p));
+  const isProtected = PROTECTED_ROUTE_PREFIXES.some(
+    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`)
+  );
   if (!isProtected) return NextResponse.next();
 
   const hasSession =
@@ -22,5 +23,11 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/dashboard/admin/:path*", "/dashboard/cooperative/:path*"],
+  matcher: [
+    "/dashboard/admin/:path*",
+    "/dashboard/cooperative/:path*",
+    "/dashboard/onssa/:path*",
+    "/compte",
+    "/compte/:path*",
+  ],
 };
