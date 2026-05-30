@@ -50,7 +50,7 @@ export function SpreadsheetEditor({
     setSelectedRows(new Set());
     setSelectedCols(new Set());
     setSavedAt(null);
-  }, [initial.id]);
+  }, [initial.id, initial.headers, initial.rows]);
 
   const colCount = headers.length;
 
