@@ -106,5 +106,4 @@ jobs:
             git -C backend reset --hard origin/main
             git -C frontend fetch origin main
             git -C frontend reset --hard origin/main
-            docker compose up -d --build
-            docker compose ps
+            bash scripts/vps-deploy.sh
