@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   title: "Mantouji — Terroirs du Maroc",
   description:
     "Vitrine premium des produits du terroir marocain et des coopératives qui les portent.",
+  icons: {
+    icon: "/images/icon.svg",
+    shortcut: "/images/icon.svg",
+    apple: "/images/icon.svg",
+  },
 };
 
 export default function RootLayout({
