@@ -1,4 +1,4 @@
-# Frontend repo: lint, build, and deploy on push to main.
+# Frontend repo: lint, build, security scans, deploy on push to main.
 
 name: CI/CD
 
@@ -12,10 +12,49 @@ concurrency:
   group: ci-cd-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+  pull-requests: read
+
 env:
   DEPLOY_PATH: /opt/mantouji
 
 jobs:
+  security:
+    name: Security (Gitleaks & Trivy)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Trivy filesystem scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: fs
+          scan-ref: .
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true
+          exit-code: 1
+
+      - name: Build image for scan
+        run: docker build -t mantouji-web:ci --build-arg NEXT_PUBLIC_API_BASE_URL=https://mantouji.org/api/v1 .
+
+      - name: Trivy image scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: image
+          image-ref: mantouji-web:ci
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true
+          exit-code: 1
+
   ci:
     name: Lint & Build
     runs-on: ubuntu-latest
@@ -44,7 +83,7 @@ jobs:
   deploy:
     name: Deploy to VPS
     runs-on: ubuntu-latest
-    needs: [ci]
+    needs: [security, ci]
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     environment: production
     concurrency:
@@ -61,8 +100,11 @@ jobs:
           script: |
             set -euo pipefail
             cd "${{ env.DEPLOY_PATH }}"
-            git pull --ff-only origin main
-            git -C backend pull --ff-only origin main
-            git -C frontend pull --ff-only origin main
+            git fetch origin main
+            git reset --hard origin/main
+            git -C backend fetch origin main
+            git -C backend reset --hard origin/main
+            git -C frontend fetch origin main
+            git -C frontend reset --hard origin/main
             docker compose up -d --build
             docker compose ps

@@ -1,0 +1,7 @@
+title = "mantouji_frontend gitleaks"
+
+[allowlist]
+description = "Example env templates"
+paths = [
+  '''\.env\.local\.example$''',
+]
